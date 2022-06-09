@@ -2,6 +2,8 @@ import React from 'react'
 
 export default function Solutions() {
   return (
-    <div>Solutions</div>
+    <section>    
+      <div>Solutions</div>
+    </section>
   )
 }

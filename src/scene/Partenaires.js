@@ -2,6 +2,8 @@ import React from 'react'
 
 export default function Partenaires() {
   return (
-    <div>Partenaires</div>
+    <section>    
+      <div>Partenaires</div>
+    </section>
   )
 }
