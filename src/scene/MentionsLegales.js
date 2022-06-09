@@ -3,8 +3,15 @@ import React from 'react'
 import '../style/mentionsLegales.css'
 
 export default function MentionsLegales() {
+  const handleClick = () => {
+    document.querySelector('.legal-notice-wrapper').style.display='none'
+  }
   return (
-    <div>
+    <div className="legal-notice-wrapper">
+<div className='legal-notice'>
+      <div className="exit-cross"
+      onClick={handleClick}>X</div>
+      Mentions légales : 
       <h3><b>Définitions</b></h3>
       <p><b>Client : </b>tout professionnel ou personne physique capable au sens des articles 1123 et suivants du Code civil, ou personne morale, qui visite le Site objet des présentes conditions générales.</p>
       <p><b>Prestations et Services : </b><a href="https://www.cabinet-cap-patrimoine">https://www.cabinet-cap-patrimoine</a> met à disposition des Clients :</p>
@@ -102,5 +109,7 @@ export default function MentionsLegales() {
         <h4><b>10. Droit applicable et attribution de juridiction.</b></h4>
         <p>Tout litige en relation avec l’utilisation du site <a href="https://www.cabinet-cap-patrimoine"> https://www.cabinet-cap-patrimoine </a> est soumis au droit français. En dehors des cas où la loi ne le permet pas, il est fait attribution exclusive de juridiction aux tribunaux compétents de <span>Bordeaux</span></p>
       </div>
+    </div>
+    
         )
 }

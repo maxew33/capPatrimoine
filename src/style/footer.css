@@ -1,0 +1,11 @@
+.footer {
+  display: flex;
+  background: var(--medium-grey);
+  border-top: 5px solid var(--dark-grey);
+  align-items: center;
+  justify-content: space-between;
+}
+
+.legal-notice-link, .contact-us {
+  cursor: pointer;
+}/*# sourceMappingURL=footer.css.map */

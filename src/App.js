@@ -8,6 +8,7 @@ import Contact from './scene/Contact'
 import MentionsLegales from './scene/MentionsLegales'
 
 import Header from './components/Header'
+import Footer from './components/Footer'
 
 import { useSelector} from 'react-redux'
 
@@ -33,7 +34,9 @@ function App() {
 
       {pages[pageRank].link}
 
-      
+      <MentionsLegales/>
+
+      <Footer />
 
     </div>
   );
