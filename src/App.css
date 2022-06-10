@@ -26,6 +26,7 @@ body {
   background: var(--light-grey);
   font-family: Barlow;
   overflow-x: hidden;
+  color: var(--dark-grey);
 }
 
 section {

@@ -15,6 +15,7 @@ export default function Footer() {
   const handleClick = () => {
     console.log('legal notice')
     document.querySelector('.legal-notice-wrapper').style.display = 'block'
+    setTimeout(() => { document.querySelector('.legal-notice-wrapper').style.opacity = 1 }, 10)
   }
 
   return (

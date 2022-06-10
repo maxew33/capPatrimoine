@@ -4,25 +4,26 @@ import '../style/mentionsLegales.css'
 
 export default function MentionsLegales() {
   const handleClick = () => {
-    document.querySelector('.legal-notice-wrapper').style.display='none'
+    setTimeout(() => { document.querySelector('.legal-notice-wrapper').style.display = 'none' }, 250)
+    document.querySelector('.legal-notice-wrapper').style.opacity = 0
   }
   return (
     <div className="legal-notice-wrapper">
-<div className='legal-notice'>
+      <div className='legal-notice'>
       <div className="exit-cross"
       onClick={handleClick}>X</div>
-      Mentions légales : 
-      <h3><b>Définitions</b></h3>
-      <p><b>Client : </b>tout professionnel ou personne physique capable au sens des articles 1123 et suivants du Code civil, ou personne morale, qui visite le Site objet des présentes conditions générales.</p>
-      <p><b>Prestations et Services : </b><a href="https://www.cabinet-cap-patrimoine">https://www.cabinet-cap-patrimoine</a> met à disposition des Clients :</p>
-      <p><b>Contenu : </b>Ensemble des éléments constituants l’information présente sur le Site, notamment textes – images – vidéos.</p>
-      <p><b>Informations clients : </b> Ci après dénommé « Information (s) » qui correspondent à l’ensemble des données personnelles susceptibles d’être détenues par <a href="https://www.cabinet-cap-patrimoine">https://www.cabinet-cap-patrimoine</a> pour la gestion de votre compte, de la gestion de la relation client et à des fins d’analyses et de statistiques.</p>
-      <p><b>Utilisateur : </b>Internaute se connectant, utilisant le site susnommé.</p>
-      <p><b>Informations personnelles : </b>« Les informations qui permettent, sous quelque forme que ce soit, directement ou non, l'identification des personnes physiques auxquelles elles s'appliquent » (article 4 de la loi n° 78-17 du 6 janvier 1978).</p>
-      <p>Les termes « données à caractère personnel », « personne concernée », « sous traitant » et « données sensibles » ont le sens défini par le Règlement Général sur la Protection des Données (RGPD : n° 2016-679)</p>
-      <h4><b>1. Présentation du site internet.</b></h4>
-      <p>En vertu de l'article 6 de la loi n° 2004-575 du 21 juin 2004 pour la confiance dans l'économie numérique, il est précisé aux utilisateurs du site internet <a href="https://www.cabinet-cap-patrimoine">https://www.cabinet-cap-patrimoine</a> l'identité des différents intervenants dans le cadre de sa réalisation et de son suivi:</p>
-      <p><strong>Propriétaire : </strong><span>SAS CV-FC gestion &amp; patrimoine - Capital social de 1000€ - Numéro de TVA: fr14907510499 - 13 allée du carretey 33610 Cestas</span><br/><strong>Responsable publication : </strong><span>Vitu - cvconseilgestionpatrimoine@gmail.com </span><br/>Le responsable publication est une personne physique ou une personne morale.<br/><strong>Webmaster</strong>: <span>Malfilâtre Maxime - maxime.malfilatre@gmail.com</span><br/><strong>Hébergeur : </strong><span>1and1-7 place de la Gare 57200 Sarreguemines 0970 808 911</span><br/><strong>Délégué à la protection des données : </strong><span>Malfilâtre - maxime.malfilatre@gmail.com</span><br/></p>
+      Mentions légales :
+        <h3><b>Définitions</b></h3>
+        <p><b>Client : </b>tout professionnel ou personne physique capable au sens des articles 1123 et suivants du Code civil, ou personne morale, qui visite le Site objet des présentes conditions générales.</p>
+        <p><b>Prestations et Services : </b><a href="https://www.cabinet-cap-patrimoine">https://www.cabinet-cap-patrimoine</a> met à disposition des Clients :</p>
+        <p><b>Contenu : </b>Ensemble des éléments constituants l’information présente sur le Site, notamment textes – images – vidéos.</p>
+        <p><b>Informations clients : </b> Ci après dénommé « Information (s) » qui correspondent à l’ensemble des données personnelles susceptibles d’être détenues par <a href="https://www.cabinet-cap-patrimoine">https://www.cabinet-cap-patrimoine</a> pour la gestion de votre compte, de la gestion de la relation client et à des fins d’analyses et de statistiques.</p>
+        <p><b>Utilisateur : </b>Internaute se connectant, utilisant le site susnommé.</p>
+        <p><b>Informations personnelles : </b>« Les informations qui permettent, sous quelque forme que ce soit, directement ou non, l'identification des personnes physiques auxquelles elles s'appliquent » (article 4 de la loi n° 78-17 du 6 janvier 1978).</p>
+        <p>Les termes « données à caractère personnel », « personne concernée », « sous traitant » et « données sensibles » ont le sens défini par le Règlement Général sur la Protection des Données (RGPD : n° 2016-679)</p>
+        <h4><b>1. Présentation du site internet.</b></h4>
+        <p>En vertu de l'article 6 de la loi n° 2004-575 du 21 juin 2004 pour la confiance dans l'économie numérique, il est précisé aux utilisateurs du site internet <a href="https://www.cabinet-cap-patrimoine">https://www.cabinet-cap-patrimoine</a> l'identité des différents intervenants dans le cadre de sa réalisation et de son suivi:</p>
+        <p><strong>Propriétaire : </strong><span>SAS CV-FC gestion &amp; patrimoine - Capital social de 1000€ - Numéro de TVA: fr14907510499 - 13 allée du carretey 33610 Cestas</span><br /><strong>Responsable publication : </strong><span>Vitu - cvconseilgestionpatrimoine@gmail.com </span><br />Le responsable publication est une personne physique ou une personne morale.<br /><strong>Webmaster</strong>: <span>Malfilâtre Maxime - maxime.malfilatre@gmail.com</span><br /><strong>Hébergeur : </strong><span>1and1-7 place de la Gare 57200 Sarreguemines 0970 808 911</span><br /><strong>Délégué à la protection des données : </strong><span>Malfilâtre - maxime.malfilatre@gmail.com</span><br /></p>
         <p>Les mentions légales sont conformes à <a href="https://fr.wikipedia.org/wiki/R%C3%A8glement_g%C3%A9n%C3%A9ral_sur_la_protection_des_donn%C3%A9es">RGPD</a> est sont proposé par <a href="https://marozed.com">Marozed</a>
         </p>
         <h4><b>2. Conditions générales d’utilisation du site et des services proposés.</b></h4>
@@ -70,7 +71,7 @@ export default function MentionsLegales() {
         </ul>
         <p>Dès que <a href="https://www.cabinet-cap-patrimoine">https://www.cabinet-cap-patrimoine</a> a connaissance du décès d’un Utilisateur et à défaut d’instructions de sa part, <a href="https://www.cabinet-cap-patrimoine">https://www.cabinet-cap-patrimoine</a> s’engage à détruire ses données, sauf si leur conservation s’avère nécessaire à des fins probatoires ou pour répondre à une obligation légale.</p>
         <p>Si l’Utilisateur souhaite savoir comment <a href="https://www.cabinet-cap-patrimoine">https://www.cabinet-cap-patrimoine</a> utilise ses Données Personnelles, demander à les rectifier ou s’oppose à leur traitement, l’Utilisateur peut contacter <a href="https://www.cabinet-cap-patrimoine">https://www.cabinet-cap-patrimoine</a> par écrit à l’adresse suivante :</p>
-        <p><span></span> - DPO, <span>Malfilâtre </span><br/><span>13 allée du carretey 33610 Cestas.</span></p>
+        <p><span></span> - DPO, <span>Malfilâtre </span><br /><span>13 allée du carretey 33610 Cestas.</span></p>
         <p>Dans ce cas, l’Utilisateur doit indiquer les Données Personnelles qu’il souhaiterait que <a href="https://www.cabinet-cap-patrimoine">https://www.cabinet-cap-patrimoine</a> corrige, mette à jour ou supprime, en s’identifiant précisément avec une copie d’une pièce d’identité (carte d’identité ou passeport).</p>
         <p>Les demandes de suppression de Données Personnelles seront soumises aux obligations qui sont imposées à <a href="https://www.cabinet-cap-patrimoine">https://www.cabinet-cap-patrimoine</a> par la loi, notamment en matière de conservation ou d’archivage des documents. Enfin, les Utilisateurs de <a href="https://www.cabinet-cap-patrimoine">https://www.cabinet-cap-patrimoine</a> peuvent déposer une réclamation auprès des autorités de contrôle, et notamment de la CNIL (https://www.cnil.fr/fr/plaintes).</p>
         <h5><b>7.4 Non-communication des données personnelles</b></h5>
@@ -79,8 +80,8 @@ export default function MentionsLegales() {
         <p>Les Données Personnelles de l’Utilisateur peuvent être traitées par des filiales de <a href="https://www.cabinet-cap-patrimoine"> https://www.cabinet-cap-patrimoine</a> et des sous-traitants (prestataires de services), exclusivement afin de réaliser les finalités de la présente politique.</p>
         <p>Dans la limite de leurs attributions respectives et pour les finalités rappelées ci-dessus, les principales personnes susceptibles d’avoir accès aux données des Utilisateurs de <a href="https://www.cabinet-cap-patrimoine"> https://www.cabinet-cap-patrimoine</a> sont principalement les agents de notre service client.</p>
         <h5><b>7.5 Types de données collectées</b></h5>
-        <p>Concernant les utilisateurs d’un Site <a href="https://www.cabinet-cap-patrimoine"> https://www.cabinet-cap-patrimoine</a>,nous collectons les données suivantes qui sont indispensables au fonctionnement du service , et qui seront conservées pendant une période maximale de <span>-</span> mois après la fin de la relation contractuelle: <br/><span>- </span></p>
-        <p><a href="https://www.cabinet-cap-patrimoine"> https://www.cabinet-cap-patrimoine </a> collecte également des informations qui améliorent l'expérience utilisateur et offre des astuces contextualisées: <br/><span> - </span></p>
+        <p>Concernant les utilisateurs d’un Site <a href="https://www.cabinet-cap-patrimoine"> https://www.cabinet-cap-patrimoine</a>,nous collectons les données suivantes qui sont indispensables au fonctionnement du service , et qui seront conservées pendant une période maximale de <span>-</span> mois après la fin de la relation contractuelle: <br /><span>- </span></p>
+        <p><a href="https://www.cabinet-cap-patrimoine"> https://www.cabinet-cap-patrimoine </a> collecte également des informations qui améliorent l'expérience utilisateur et offre des astuces contextualisées: <br /><span> - </span></p>
         <p> Ces données sont conservées pendant un maximum de <span>-</span> mois après la fin de la relation contractuelle.</p>
         <h4><b>8. Notification d’incident.</b></h4>
         <p>Quels que soient les efforts fournis, aucune méthode de transmission sur Internet et aucune méthode de stockage électronique n'est complètement sûre. Nous ne pouvons en conséquence pas garantir une sécurité absolue. Si nous prenions connaissance d'une brèche de la sécurité, nous avertirions les utilisateurs concernés afin qu'ils puissent prendre les mesures appropriées. Nos procédures de notification d’incident tiennent compte de nos obligations légales, qu'elles se situent au niveau national ou européen. Nous nous engageons à informer pleinement nos clients de toutes les questions relevant de la sécurité de leur compte et à leur fournir toutes les informations nécessaires pour les aider à respecter leurs propres obligations réglementaires en matière de reporting.</p>
@@ -110,6 +111,6 @@ export default function MentionsLegales() {
         <p>Tout litige en relation avec l’utilisation du site <a href="https://www.cabinet-cap-patrimoine"> https://www.cabinet-cap-patrimoine </a> est soumis au droit français. En dehors des cas où la loi ne le permet pas, il est fait attribution exclusive de juridiction aux tribunaux compétents de <span>Bordeaux</span></p>
       </div>
     </div>
-    
-        )
+
+  )
 }

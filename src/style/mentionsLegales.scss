@@ -1,15 +1,17 @@
-.legal-notice-wrapper{
+.legal-notice-wrapper {
     display: none;
     width: 100vw;
     height: 100vh;
     position: absolute;
     top: 0;
     left: 0;
-    background: hsl(0deg, 0%, 0%, .25);
+    background: hsl(0deg, 0%, 0%, 0.25);
+    opacity: 0;
+    transition: 0.125s opacity ease-in-out;
     backdrop-filter: blur(2px);
 }
 
-.legal-notice{
+.legal-notice {
     width: min(75vw, 1000px);
     height: 80vh;
     overflow-y: scroll;
@@ -20,8 +22,10 @@
     transform: translate(-50%, -50%);
     padding: 5rem;
     border: 2px solid var(--dark-grey);
+}
 
-    .exit-cross{
-        cursor: pointer;
-    }
+.exit-cross {
+    cursor: pointer;
+    position: sticky;
+    color: crimson;
 }
