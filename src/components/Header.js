@@ -3,10 +3,10 @@ import React from 'react'
 import logo from '../assets/logo.png'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faLinkedinIn} from '@fortawesome/free-brands-svg-icons'
+import { faLinkedinIn } from '@fortawesome/free-brands-svg-icons'
 
 import { useSelector, useDispatch } from 'react-redux'
-import {changePage} from '../redux/changePage'
+import { changePage } from '../redux/changePage'
 
 export default function Header(props) {
 
@@ -46,9 +46,12 @@ export default function Header(props) {
       </nav>
 
       <div className="social-network">
-
-        <FontAwesomeIcon icon={faLinkedinIn} />
-
+        <a href="https://www.linkedin.com/in/christophe-vitu/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="link to linkedin">
+          <FontAwesomeIcon icon={faLinkedinIn} />
+        </a>
       </div>
     </div>
   )

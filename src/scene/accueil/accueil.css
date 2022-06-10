@@ -1,0 +1,100 @@
+.banner-illus {
+  position: absolute;
+  width: 100vw;
+  height: 33vh;
+  z-index: -1;
+}
+.banner-illus img {
+  height: inherit;
+  width: inherit;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.banner-illus .overlay {
+  width: inherit;
+  height: 50%;
+  position: absolute;
+  bottom: 0;
+  background: radial-gradient(ellipse at center, hsl(0deg, 0%, 100%) 10%, hsla(0deg, 0%, 100%, 0));
+}
+
+.banner {
+  position: relative;
+}
+
+.banner-accueil {
+  height: 33vh;
+}
+.banner-accueil .banner-title {
+  position: absolute;
+  bottom: 0;
+  height: 50%;
+  width: 100%;
+  display: grid;
+  place-content: center;
+}
+
+.banner-title {
+  text-align: center;
+  font-size: 3.5rem;
+  font-weight: 800;
+}
+
+.banner-tagline {
+  text-align: center;
+  font-size: 1.75rem;
+  padding: 0.75rem 0;
+  max-width: 1200px;
+}
+
+.accueil-wrapper {
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5rem;
+  margin-bottom: 5rem;
+}
+
+.presentation {
+  display: flex;
+  gap: 3rem;
+}
+
+.id-pic {
+  height: 20rem;
+  width: auto;
+}
+
+.presentation-detail-container {
+  height: 100%;
+  width: 100%;
+  background: var(--medium-grey);
+  border-radius: 0 10rem 0 10rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.presentation-detail-text {
+  font-family: var(--font-fam2);
+  font-size: 1.35rem;
+  font-style: italic;
+  line-height: 1.5;
+  margin: 0 5rem;
+}
+
+.presentation-detail-descr {
+  align-self: flex-end;
+  margin: 0 5rem;
+  display: flex;
+  align-items: baseline;
+  gap: 1.5rem;
+}
+.presentation-detail-descr .presentation-detail-name {
+  font-size: 2rem;
+  font-weight: bold;
+}
+.presentation-detail-descr .presentation-detail-rank {
+  font-size: 1.25rem;
+}/*# sourceMappingURL=accueil.css.map */

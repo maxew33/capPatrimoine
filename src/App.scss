@@ -26,11 +26,13 @@
     --dark-grey: #4b4a4f;
     --gold: #eac944;
     --margin-side: 1.5rem;
+    --font-fam1: Barlow;
+    --font-fam2: Lora
 }
 
 body {
     background: var(--light-grey);
-    font-family: Barlow;
+    font-family: var(--font-fam1);
     overflow-x: hidden;
     color: var(--dark-grey);
 }
@@ -43,19 +45,20 @@ section {
 
 .header {
     position: sticky;
-    top: -5vh;
+    top: 0;
     width: 100vw;
-    height: 10vh;
+    // height: 10vh;
     display: flex;
     align-items: center;
     justify-content: space-between;
     background: var(--medium-grey);
     color: var(--dark-grey);
     border-bottom: 5px solid var(--dark-grey);
+    z-index: 10;
 }
 
 .logo-container {
-    height: 9vh;
+    // height: 9vh;
     margin-left: var(--margin-side);
     display: flex;
     align-items: center;
@@ -65,7 +68,8 @@ section {
 }
 
 .logo-container-img {
-    height: inherit;
+    height: 9vh;
+    padding: .25rem 0;
     object-fit: contain;
 }
 

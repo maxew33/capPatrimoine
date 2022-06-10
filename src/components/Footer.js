@@ -6,7 +6,7 @@ import { faLinkedinIn } from '@fortawesome/free-brands-svg-icons'
 
 import logo from '../assets/logo.png'
 import { useDispatch } from 'react-redux'
-import {changePage} from '../redux/changePage'
+import { changePage } from '../redux/changePage'
 
 export default function Footer() {
 
@@ -31,19 +31,22 @@ export default function Footer() {
       </div>
 
       <div className="legal-notice-link"
-      onClick = {handleClick}>
+        onClick={handleClick}>
         Mentions légales
-        </div>
+      </div>
 
       <div className="contact-us"
         onClick={() => dispatch(changePage(4))}>
-          Contactez-nous
-          </div>
+        Contactez-nous
+      </div>
 
       <div className="social-network">
-
-        <FontAwesomeIcon icon={faLinkedinIn} />
-
+        <a href="https://www.linkedin.com/in/christophe-vitu/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="link to linkedin">
+          <FontAwesomeIcon icon={faLinkedinIn} />
+        </a>
       </div>
 
     </div>

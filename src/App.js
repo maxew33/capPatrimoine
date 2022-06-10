@@ -1,11 +1,12 @@
 import './App.css';
 
-import Accueil from './scene/Accueil'
-import Cabinet from './scene/Cabinet'
-import Solutions from './scene/Solutions'
-import Partenaires from './scene/Partenaires'
-import Contact from './scene/Contact'
-import MentionsLegales from './scene/MentionsLegales'
+import Accueil from './scene/accueil/Accueil'
+import Cabinet from './scene/cabinet/Cabinet'
+import Solutions from './scene/solutions/Solutions'
+import Partenaires from './scene/partenaires/Partenaires'
+import Contact from './scene/contact/Contact'
+import MentionsLegales from './scene/mentionsLegales/MentionsLegales'
+import TransitionSlide from './components/TransitionSlide';
 
 import Header from './components/Header'
 import Footer from './components/Footer'
@@ -16,8 +17,6 @@ function App() {
 
   const pageRank = useSelector(state => state.myPage.pageRank)
 
-
-
   const pages = [
     { name: 'accueil', link: <Accueil /> },
     { name: 'cabinet', link: <Cabinet /> },
@@ -26,9 +25,10 @@ function App() {
     { name: 'contact', link: <Contact /> }
   ]
 
-
   return (
     <div className="App">
+
+      {/* <TransitionSlide/> */}
 
       <Header pages={pages} />
 

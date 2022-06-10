@@ -1,6 +1,6 @@
 import React from 'react'
 
-import '../style/mentionsLegales.css'
+import './mentionsLegales.css'
 
 export default function MentionsLegales() {
   const handleClick = () => {
