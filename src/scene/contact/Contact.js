@@ -2,20 +2,29 @@ import React from 'react'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faLinkedinIn } from '@fortawesome/free-brands-svg-icons'
-import { faPhone, faEnvelope, faE } from '@fortawesome/free-solid-svg-icons'
+import { faPhone, faEnvelope } from '@fortawesome/free-solid-svg-icons'
+import pen from '../../assets/pen.jpg'
+
+import './contact.css'
 
 export default function Contact() {
   return (
     <section>
 
-      <div className="banner banner-partners">
+      <div className="banner banner-contact">
+        <img
+          className='banner-img'
+          src={pen}
+          alt="contact" />
         <div className="banner-title">
           Contactez-nous
         </div>
+
       </div>
 
-      <div className="contact-details">
-        <div className="contact-direct">
+      <div className="contact-wrapper page-wrapper">
+
+        <div className="contact contact-direct">
           <div className="contact-direct-title">
             Directement
           </div>
@@ -40,7 +49,7 @@ export default function Contact() {
                 écrivez-nous
               </div>
               <div className="contact-direct-link">
-                cvconseilgestionpatrimoine@gmail.com
+                cvconseilgestionpatrimoine<br/>@gmail.com
               </div>
             </div>
             <div className="contact-direct-detail">
@@ -61,7 +70,7 @@ export default function Contact() {
           </div>
         </div>
 
-        <div className="contact-form">
+        <div className="contact contact-form">
           <div className="contact-form-title"></div>
           <form action="">
             <div className="contact-form-inputs">
@@ -78,6 +87,7 @@ export default function Contact() {
             </div>
           </form>
         </div>
+
       </div>
 
     </section>

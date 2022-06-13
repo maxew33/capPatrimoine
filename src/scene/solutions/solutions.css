@@ -1,0 +1,36 @@
+.solutions-wrapper .solution:nth-child(even) {
+  background: var(--medium-grey);
+}
+
+.solution {
+  width: 100%;
+  height: 30rem;
+  display: grid;
+  grid-template: 2rem auto/2.5fr 3fr;
+  grid-template-areas: "title title" "img text";
+  place-items: center;
+  padding: 2.5rem 0 2.5rem 2.5rem;
+  background: var(--light-grey);
+}
+
+.solution-title {
+  grid-area: title;
+  font-size: 2rem;
+  font-weight: bold;
+  justify-self: start;
+  margin-left: 5rem;
+}
+
+.solution-text {
+  grid-area: text;
+  margin: 0;
+}
+
+.solution-img {
+  grid-area: img;
+  height: 18rem;
+  width: 30rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+  justify-self: center;
+}/*# sourceMappingURL=solutions.css.map */

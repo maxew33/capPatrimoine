@@ -1,0 +1,13 @@
+.cabinet-wrapper{
+    .characteristics{
+        &:nth-child(odd){
+            background: var(--light-grey);
+        }
+        &:nth-child(even){
+            grid-template: 2rem auto / 3fr 2.5fr;
+            grid-template-areas:
+                "img title"
+                "img text";
+        }
+    }
+}

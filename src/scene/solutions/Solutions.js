@@ -4,9 +4,12 @@ import CtaContact from '../../components/CtaContact'
 import financialSavings from '../../assets/greenplant.jpg'
 import realEstateSavings from '../../assets/keys.jpg'
 
+import './solutions.css'
+
 export default function Solutions() {
   return (
     <section>
+      {/* faire un toggle pour changer la classe des solutions => characteristic lors du passage en portrait */}
 
       <div className="banner banner-solutions">
         <div className="banner-title">
@@ -17,38 +20,42 @@ export default function Solutions() {
         </div>
       </div>
 
-      <div className="solutions-details">
-        <div className="solutions-detail-container">
-          <div className="solution-detail-title">
+
+      <div className="solutions-wrapper page-wrapper">
+
+        <div className="solution">
+          <div className="solution-title">
             Épargne financière
           </div>
-          <div className="solution-detail-content">
-            <div className="solution-detail-img">
-              <img src={financialSavings} alt="" />
-            </div>
-            <div className="solution-detail-text">
-              Assurance vie, Contrat de capitalisation. Multigestionnaire, à architecture ouverte, avec options de gestion financière, garantie plancher des sommes investies.
-            </div>
+          <img
+            className="solution-img"
+            src={financialSavings}
+            alt="épargne financière" />
+          <div className="solution-text paragraph-content-text">
+            Assurance vie, Contrat de capitalisation. Multigestionnaire, à architecture ouverte, avec options de gestion financière, garantie plancher des sommes investies.
           </div>
         </div>
-        <div className="solutions-detail-container">
-          <div className="solution-detail-title">
+
+        <div className="solution">
+          <div className="solution-title">
             Épargne immobilière
           </div>
-          <div className="solution-detail-content">
-            <div className="solution-detail-img">
-              <img src={realEstateSavings} alt="" />
-            </div>
-            <div className="solution-detail-text">
-              Dispositifs Pinel<br />
-              Dispositif Malraux<br />
-              SCPI de rendement<br />
-            </div>
+          <div>
+            <img
+              className="solution-img"
+              src={realEstateSavings}
+              alt="épargne immobilière" />
+          </div>
+          <div className="solution-text paragraph-content-text">
+            Dispositifs Pinel<br />
+            Dispositif Malraux<br />
+            SCPI de rendement<br />
           </div>
         </div>
-      </div>
 
-      <CtaContact />
+        <CtaContact />
+
+      </div>
 
     </section>
   )

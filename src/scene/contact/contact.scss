@@ -1,0 +1,35 @@
+.banner-img{
+height: 25vh;
+width: 100vw;
+object-fit: cover;
+}
+
+.contact{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.contact-direct-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.contact-direct-detail{
+    width: 30%;
+    aspect-ratio: 1/.75;
+    background: var(--medium-grey);
+    display: grid;
+    grid-template-areas: 
+    "icon"
+    "name"
+    "link";
+    place-items: center;
+    font-size: 1.5rem;
+}
+
+.contact-direct-icon{
+    font-size: 4.25rem;
+}

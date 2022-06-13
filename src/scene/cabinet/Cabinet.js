@@ -6,6 +6,8 @@ import reponses from '../../assets/advising.jpg'
 import accompagnement from '../../assets/working-process.jpg'
 import expertise from '../../assets/raising-graph.jpg'
 
+import './cabinet.css'
+
 export default function Cabinet() {
   return (
     <section>
@@ -19,70 +21,86 @@ export default function Cabinet() {
         </div>
       </div>
 
-      <div className="cabinet-wrapper">
-        <div className="cabinet-detail-container">
-          <div className="cabinet-detail-img">
-            <img src={attente} alt="" />
+      <div className="cabinet-wrapper page-wrapper">
+
+        <div className="characteristics">
+          <img
+            className="characteristics-img"
+            src={attente}
+            alt="vos attentes" />
+
+          <div className="characteristics-title">
+            Vos attentes
           </div>
-          <div className="cabinet-detail-text">
-            <div className="cabinet-detail-text-title">
-              Vos attentes
-            </div>
-            <div className="cabinet-detail-text-content">
-              Tout d’abord nous faisons un audit complet de votre situation et de vos besoins, puis dans un second temps restitution des préconisations, enfin nous rechercherons des solutions auprès de nos partenaires pour un accompagnement dans leurs mises en place.
-            </div>
-          </div>
-        </div>
-        <div className="cabinet-detail-container">
-          <div className="cabinet-detail-img">
-            <img src={reponses} alt="" />
-          </div>
-          <div className="cabinet-detail-text">
-            <div className="cabinet-detail-text-title">
-              Nos réponses
-            </div>
-            <div className="cabinet-detail-text-content">
-              Pour mieux répondre à vos attentes, nous allons chercher les solutions avec toute la largeur et la profondeur qui existent sur le marché, en toute objectivité, transparence et indépendance grâce à mes nombreux partenaires financiers, immobiliers et société de gestion.
-            </div>
+
+          <div className="characteristics-text paragraph-content-text">
+            Tout d’abord nous faisons un audit complet de votre situation et de vos besoins, puis dans un second temps restitution des préconisations, enfin nous rechercherons des solutions auprès de nos partenaires pour un accompagnement dans leurs mises en place.
           </div>
         </div>
-        <div className="cabinet-detail-container">
-          <div className="cabinet-detail-img">
-            <img src={accompagnement} alt="" />
+
+        <div className="characteristics">
+
+          <img
+            className="characteristics-img"
+            src={reponses}
+            alt="nos réponses" />
+
+          <div className="characteristics-title">
+            Nos réponses
           </div>
-          <div className="cabinet-detail-text">
-            <div className="cabinet-detail-text-title">
-              Notre accompagnement
-            </div>
-            <div className="cabinet-detail-text-content">
-              Au cabinet CAP Patrimoine, vous aurez un interlocuteur unique qui s’engagera à vous accompagner dans le temps pour des solutions optimisées et personnalisées.
-            </div>
+
+          <div className="characteristics-text paragraph-content-text">
+            Pour mieux répondre à vos attentes, nous allons chercher les solutions avec toute la largeur et la profondeur qui existent sur le marché, en toute objectivité, transparence et indépendance grâce à mes nombreux partenaires financiers, immobiliers et société de gestion.
           </div>
+
         </div>
-        <div className="cabinet-detail-container">
-          <div className="cabinet-detail-img">
-            <img src={expertise} alt="" />
+
+        <div className="characteristics">
+
+          <img
+            className="characteristics-img"
+            src={accompagnement}
+            alt="notre accompagnement" />
+
+          <div className="characteristics-title">
+            Notre accompagnement
           </div>
-          <div className="cabinet-detail-text">
-            <div className="cabinet-detail-text-title">
-              Notre expertise
-            </div>
-            <div className="cabinet-detail-text-content">
-              Activer les leviers<br />
-              Utiliser les outils juridiques et fiscaux<br />
-              Optimiser de la fiscalité<br />
-              Préparer retraite<br />
-              Anticiper les transmissions dans les meilleures conditions<br />
-              Optimiser la rémunération du dirigeant<br />
-              Financer au mieux les projets<br />
-              Sécuriser les proches et le patrimoine<br />
-            </div>
+
+          <div className="characteristics-text paragraph-content-text">
+            Au cabinet CAP Patrimoine, vous aurez un interlocuteur unique qui s’engagera à vous accompagner dans le temps pour des solutions optimisées et personnalisées.
           </div>
+
         </div>
+
+        <div className="characteristics">
+
+          <img
+            className="characteristics-img"
+            src={expertise}
+            alt="notre expertise" />
+
+          <div className="characteristics-title">
+            Notre expertise
+          </div>
+
+          <div className="characteristics-text paragraph-content-text">
+            Activer les leviers<br />
+            Utiliser les outils juridiques et fiscaux<br />
+            Optimiser de la fiscalité<br />
+            Préparer retraite<br />
+            Anticiper les transmissions dans les meilleures conditions<br />
+            Optimiser la rémunération du dirigeant<br />
+            Financer au mieux les projets<br />
+            Sécuriser les proches et le patrimoine<br />
+          </div>
+
+        </div>
+
+        <CtaContact />
+
       </div>
 
-      <CtaContact />
 
-    </section>
+    </section >
   )
 }
