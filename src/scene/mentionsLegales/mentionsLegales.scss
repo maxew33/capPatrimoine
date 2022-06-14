@@ -9,6 +9,7 @@
     opacity: 0;
     transition: 0.125s opacity ease-in-out;
     backdrop-filter: blur(2px);
+    z-index: 100;
 }
 
 .legal-notice {

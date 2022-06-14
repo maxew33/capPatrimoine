@@ -25,7 +25,7 @@ export default function Contact() {
       <div className="contact-wrapper page-wrapper">
 
         <div className="contact contact-direct">
-          <div className="contact-direct-title">
+          <div className="contact-title contact-direct-title">
             Directement
           </div>
           <div className="contact-direct-container">
@@ -49,7 +49,7 @@ export default function Contact() {
                 écrivez-nous
               </div>
               <div className="contact-direct-link">
-                cvconseilgestionpatrimoine<br/>@gmail.com
+                cvconseilgestionpatrimoine<br />@gmail.com
               </div>
             </div>
             <div className="contact-direct-detail">
@@ -71,18 +71,70 @@ export default function Contact() {
         </div>
 
         <div className="contact contact-form">
-          <div className="contact-form-title"></div>
-          <form action="">
+          <div className="contact-title contact-form-title">
+            ou en complétant le formulaire
+          </div>
+
+          <form
+            className='contact-form'
+            action="">
             <div className="contact-form-inputs">
-              <input type="text" />
-              <input type="text" />
-              <input type="text" />
-              <select name="" id=""></select></div>
+              <div className="contact-form-input">
+                <input id="lastname-input"
+                  type="text"
+                  name="user-lastname"
+                  required />
+                <label
+                  className="input-txt-label"
+                  htmlFor="lastname-input">Nom</label>
+              </div>
+              <div className="contact-form-input">
+                <input id="firstname-input"
+                  type="text"
+                  name="user-firstname"
+                  required />
+                <label
+                  className="input-txt-label"
+                  htmlFor="firstname-input">Prénom</label>
+              </div>
+              <div className="contact-form-input">
+                <input
+                  id="email-input"
+                  type="email"
+                  name="user-email"
+                  required />
+                <label
+                  className="input-txt-label"
+                  htmlFor="email-input">email</label>
+              </div>
+
+              <select
+                className='contact-form-select'
+                name=""
+                id="">
+                <option value="">motif</option>
+                <option value="">demande de rendez-vous</option>
+                <option value="">audit financier</option>
+                <option value="">audit immobilier</option>
+                <option value="">autre</option>
+
+              </select>
+            </div>
+
             <div className="contact-form-txt-sub">
-              <textarea name="" id="" cols="30" rows="10">
+              <textarea
+                className='contact-form-txt'
+                name=""
+                id="message-form"
+                cols="30"
+                rows="10"
+                required>
               </textarea>
-              <button>
-                submit
+              <label
+                className="input-txt-label"
+                htmlFor="message-form">message</label>
+              <button className='contact-form-btn'>
+                Envoyer
               </button>
             </div>
           </form>
