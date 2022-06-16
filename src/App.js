@@ -10,20 +10,58 @@ import TransitionSlide from './components/TransitionSlide';
 
 import Header from './components/Header'
 import Footer from './components/Footer'
+import ScrollToTop from './components/ScrollToTop'
 
-import { useSelector} from 'react-redux'
+import { useSelector } from 'react-redux'
+import { useState, useEffect } from 'react'
+
+import useWindowSize from './utils/useWindowSize'
 
 function App() {
 
   const pageRank = useSelector(state => state.myPage.pageRank)
 
+  const [orientation, setOrientation] = useState('landscape')
+
+  const size = useWindowSize()
+
   const pages = [
-    { name: 'accueil', link: <Accueil /> },
-    { name: 'cabinet', link: <Cabinet /> },
-    { name: 'solutions', link: <Solutions /> },
-    { name: 'partenaires', link: <Partenaires /> },
-    { name: 'contact', link: <Contact /> }
+    { name: 'Accueil', link: <Accueil /> },
+    { name: 'Cabinet', link: <Cabinet /> },
+    { name: 'Solutions', link: <Solutions /> },
+    { name: 'Partenaires', link: <Partenaires /> },
+    { name: 'Contact', link: <Contact /> }
   ]
+
+  useEffect(() => {
+    fastScrollToTop()
+  }, [pageRank])
+
+  useEffect(() => {
+    console.log(`
+ _                       
+|_)  _   _  o  _       _ 
+|_) (_) | | | (_) |_| |  
+           _|            
+      \\_________/
+    
+`)
+
+    size.height < size.width ? setOrientation('landscape') : setOrientation('portrait')
+    console.log(size.height)
+
+  }, [])
+
+
+  useEffect(() => {
+    // effect triggered when changing viewport size
+    size.height < size.width ? setOrientation('landscape') : setOrientation('portrait')
+  }, [size])
+
+  const fastScrollToTop = () => {
+    console.log('scroll to top')
+    document.documentElement.scrollTo(0, 0)
+  }
 
   return (
     <div className="App">
@@ -34,7 +72,9 @@ function App() {
 
       {pages[pageRank].link}
 
-      <MentionsLegales/>
+      <ScrollToTop size={size} />
+
+      <MentionsLegales />
 
       <Footer />
 

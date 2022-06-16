@@ -9,13 +9,14 @@
     padding: 2.5rem 0;
 }
 
-.tagline{
+.tagline {
     font-weight: bolder;
     line-height: 1.5;
     text-align: center;
 }
 
-.contact-link-button{
+.contact-link-button {
+    position: relative;
     padding: 2.5rem;
     cursor: pointer;
     color: var(--light-grey);
@@ -24,4 +25,74 @@
     border-radius: 999px;
     font-size: 2.5rem;
     border: none;
+
+    &::before,
+    &::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 100%;
+        height: 100%;
+        border: 1px solid var(--dark-grey);
+        border-radius: inherit;
+        transform-origin: center;
+        transform: translate(-50%, -50%) scale(0.9);
+        animation: 5s pulse linear infinite;
+    }
+
+    &::after {
+        animation-delay: 1.25s;
+    }
+
+    &:hover {
+        overflow: hidden;
+    }
+
+    &:hover::after,
+    &:hover::before {
+        width: 15%;
+        height: 150%;
+        top: 0%;
+        left: -10%;
+        transform: translate(-5vw, 0%) rotate(-15deg);
+        animation: 1.5s swipe cubic-bezier(1, 0.4, 1, 0.4) infinite;
+        border: none;
+        border-radius: 0;
+        background: linear-gradient(90deg, transparent, var(--gold));
+        // opacity: 0.25;
+    }
+
+    &:hover::after {
+        animation-delay: 0.25s;
+    }
+}
+
+@keyframes pulse {
+    0%,
+    70% {
+        transform: translate(-50%, -50%) scale(0.9);
+        opacity: 1;
+    }
+
+    85% {
+        transform: translate(-50%, -50%) scale(1.2);
+        opacity: 0.25;
+    }
+
+    100% {
+        transform: translate(-50%, -50%) scale(1.5);
+        opacity: 0;
+    }
+}
+
+@keyframes swipe {
+    0% {
+        transform: translate(-5vw, 0) rotate(-15deg);
+    }
+
+    40%,
+    100% {
+        transform: translate(60vw, 0) rotate(-15deg);
+    }
 }

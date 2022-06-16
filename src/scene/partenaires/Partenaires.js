@@ -4,69 +4,13 @@ import CtaContact from '../../components/CtaContact'
 import logo from '../../assets/logo.png'
 import jigsaw from '../../assets/jigsaw.jpg'
 
-import bouygues from '../../assets/bouygues.png'
-import citya from '../../assets/citya.png'
-import cogedim from '../../assets/cogedim.png'
-import foncia from '../../assets/foncia.png'
-import fonta from '../../assets/fonta.png'
-import icade from '../../assets/icade.jpg'
-import imodeus from '../../assets/imodeus.png'
-import kaufman from '../../assets/kaufaman.jpg'
-import nacarat from '../../assets/nacarat.png'
-import pitch from '../../assets/pitch.png'
-import tagerim from '../../assets/tagerim.png'
 
 import './partenaires.css'
 import { useEffect } from 'react'
 
-export default function Partenaires() {
+import {immoLogo, placementLogo, financementLogo} from '../../data/partnersLogo'
 
-  const promLogo = [
-    {
-      name: 'bouygues',
-      link: bouygues
-    },
-    {
-      name: 'citya',
-      link: citya
-    },
-    {
-      name: 'cogedim',
-      link: cogedim
-    },
-    {
-      name: 'foncia',
-      link: foncia
-    },
-    {
-      name: 'fonta',
-      link: fonta
-    },
-    {
-      name: 'icade',
-      link: icade
-    },
-    {
-      name: 'imodeus',
-      link: imodeus
-    },
-    {
-      name: 'kaufman',
-      link: kaufman
-    },
-    {
-      name: 'nacarat',
-      link: nacarat
-    },
-    {
-      name: 'pitch',
-      link: pitch
-    },
-    {
-      name: 'tagerim',
-      link: tagerim
-    }
-  ]
+export default function Partenaires() {
 
   useEffect(() => {
 
@@ -74,7 +18,7 @@ export default function Partenaires() {
 
     setTimeout(() => {
       carouselContent.forEach(carousel => {
-        carousel.style.setProperty('--slide-speed', carousel.getBoundingClientRect().width / 150 + 's')
+        carousel.style.setProperty('--slide-speed', carousel.getBoundingClientRect().width / 75 + 's')
         console.log(carousel, carousel.getBoundingClientRect().width)
       })
     }, 250)
@@ -111,15 +55,17 @@ export default function Partenaires() {
               src={logo}
               alt="boussole" />
             <div className="partners-banner-title">
-              Promoteurs et gestionnaires
+              Immobilier
             </div>
+          </div>
+          <div className="partners-intro">Des programmes en investissement locatif rigoureusement sélectionnés sur tout le territoire
           </div>
           <div className="partners-carousel">
             <div className="carousel-content">
               {
-                promLogo.map((logo, idx) => {
+                immoLogo.map(logo => {
                   return (<img
-                    key={idx}
+                    key={logo.id}
                     src={logo.link}
                     alt={logo.name} />)
                 })
@@ -127,9 +73,9 @@ export default function Partenaires() {
             </div>
             <div className="carousel-content">
               {
-                promLogo.map((logo, idx) => {
+                immoLogo.map(logo => {
                   return (<img
-                    key={idx}
+                    key={logo.id}
                     src={logo.link}
                     alt={logo.name} />)
                 })
@@ -145,10 +91,34 @@ export default function Partenaires() {
               src={logo}
               alt="boussole" />
             <div className="partners-banner-title">
-              Société de gestion
+              Placement
             </div>
           </div>
-          <div className="partners-carousel"></div>
+          <div className="partners-intro">
+          Une gamme complète de solutions de placement financiers sélectionnée auprès des plus grandes signatures du marché
+          </div>
+          <div className="partners-carousel">
+            <div className="carousel-content carousel-content-reversed">
+              {
+                placementLogo.map(logo => {
+                  return (<img
+                    key={logo.id}
+                    src={logo.link}
+                    alt={logo.name} />)
+                })
+              }
+            </div>
+            <div className="carousel-content carousel-content-reversed">
+              {
+                placementLogo.map(logo => {
+                  return (<img
+                    key={logo.id}
+                    src={logo.link}
+                    alt={logo.name} />)
+                })
+              }
+            </div>
+            </div>
         </div>
 
         <div className="partners">
@@ -158,10 +128,33 @@ export default function Partenaires() {
               src={logo}
               alt="boussole" />
             <div className="partners-banner-title">
-              Placement et financement
+              Financement
             </div>
           </div>
-          <div className="partners-carousel"></div>
+          <div className="partners-intro">
+          Des spécialistes du financement des projets patrimoniaux en immobilier et en SCPI
+          </div>
+          <div className="partners-carousel">
+            <div className="carousel-content">
+              {
+                financementLogo.map(logo => {
+                  return (<img
+                    key={logo.id}
+                    src={logo.link}
+                    alt={logo.name} />)
+                })
+              }
+            </div>
+            <div className="carousel-content">
+              {
+                financementLogo.map(logo => {
+                  return (<img
+                    key={logo.id}
+                    src={logo.link}
+                    alt={logo.name} />)
+                })
+              }
+            </div></div>
         </div>
 
         <CtaContact />

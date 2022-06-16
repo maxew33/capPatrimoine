@@ -1,0 +1,16 @@
+.scroll-to-top {
+  position: -webkit-sticky;
+  position: sticky;
+  bottom: 2rem;
+  left: 95vw;
+  aspect-ratio: 1;
+  background: hsla(0deg, 0%, 0%, 0.1);
+  -webkit-backdrop-filter: blur(2px);
+          backdrop-filter: blur(2px);
+  border: none;
+  border-radius: 999px;
+  font-size: 1.5rem;
+  color: var(--dark-grey);
+  cursor: pointer;
+  z-index: 20;
+}/*# sourceMappingURL=scrollToTop.css.map */

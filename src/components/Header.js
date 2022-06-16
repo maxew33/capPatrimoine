@@ -7,8 +7,11 @@ import { faLinkedinIn } from '@fortawesome/free-brands-svg-icons'
 
 import { useSelector, useDispatch } from 'react-redux'
 import { changePage } from '../redux/changePage'
+import { useState } from 'react'
 
 export default function Header(props) {
+
+  const [myLogoIsResized, setMyLogoIsResized] = useState(false)
 
   const pages = props.pages
 
@@ -16,11 +19,29 @@ export default function Header(props) {
 
   const dispatch = useDispatch()
 
+  const setLogoSize = () => {
+
+    const myLogo = document.querySelector('.header-logo')
+
+    const scrolled = document.documentElement.scrollTop;
+    if (scrolled === 0 && myLogoIsResized) {
+      myLogo.style.height = '9vh'
+      setMyLogoIsResized(!myLogoIsResized)
+    }
+    else if (!myLogoIsResized) {
+      myLogo.style.height = '2.5rem'
+      setMyLogoIsResized(!myLogoIsResized)
+    }
+
+  }
+
+  window.addEventListener('scroll', setLogoSize)
+
   return (
     <div className="header">
 
       <div className="logo-container">
-        <img className="logo-container-img"
+        <img className="logo-container-img header-logo"
           src={logo}
           alt="cabinet cap patrimoine" />
         <div className="logo-container-name">Cabinet CAP Patrimoine
@@ -35,7 +56,7 @@ export default function Header(props) {
                 <li
                   key={idx}
                   onClick={() => dispatch(changePage(idx))}
-                  className={pages[pageRank].name === page.name ? 'displayed' : 'toto'}
+                  className={pages[pageRank].name === page.name ? 'displayed' : ''}
                 >
                   {page.name}
                 </li>
