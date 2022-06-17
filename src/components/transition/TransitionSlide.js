@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react'
 
-import logo from '../assets/logo.png'
+import logo from '../../assets/logo.png'
 
-import '../style/transition-slide.css'
+import './transition-slide.css'
 
 export default function TransitionSlide() {
 

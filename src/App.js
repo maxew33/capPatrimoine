@@ -6,16 +6,17 @@ import Solutions from './scene/solutions/Solutions'
 import Partenaires from './scene/partenaires/Partenaires'
 import Contact from './scene/contact/Contact'
 import MentionsLegales from './scene/mentionsLegales/MentionsLegales'
-import TransitionSlide from './components/TransitionSlide';
+import TransitionSlide from './components/transition/TransitionSlide';
 
-import Header from './components/Header'
-import Footer from './components/Footer'
-import ScrollToTop from './components/ScrollToTop'
+import Header from './components/header/Header'
+import Footer from './components/footer/Footer'
+import ScrollToTop from './components/scrollToTop/ScrollToTop'
 
 import { useSelector } from 'react-redux'
 import { useState, useEffect } from 'react'
 
 import useWindowSize from './utils/useWindowSize'
+import CookieConsent from './components/cookieConsent/CookieConsent';
 
 function App() {
 
@@ -77,6 +78,8 @@ function App() {
       <MentionsLegales />
 
       <Footer />
+
+      <CookieConsent/>
 
     </div>
   );

@@ -3,7 +3,7 @@ import { useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 
-import '../style/scrollToTop.css'
+import './scrollToTop.css'
 import { faChevronUp } from '@fortawesome/free-solid-svg-icons'
 
 

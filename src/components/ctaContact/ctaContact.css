@@ -37,12 +37,12 @@
   border-radius: inherit;
   transform-origin: center;
   transform: translate(-50%, -50%) scale(0.9);
-  -webkit-animation: 5s pulse linear infinite;
-          animation: 5s pulse linear infinite;
+  -webkit-animation: 4s pulse linear infinite;
+          animation: 4s pulse linear infinite;
 }
 .contact-link-button::after {
-  -webkit-animation-delay: 1.25s;
-          animation-delay: 1.25s;
+  -webkit-animation-delay: 0.25s;
+          animation-delay: 0.25s;
 }
 .contact-link-button:hover {
   overflow: hidden;

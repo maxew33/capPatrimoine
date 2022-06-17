@@ -38,11 +38,11 @@
         border-radius: inherit;
         transform-origin: center;
         transform: translate(-50%, -50%) scale(0.9);
-        animation: 5s pulse linear infinite;
+        animation: 4s pulse linear infinite;
     }
 
     &::after {
-        animation-delay: 1.25s;
+        animation-delay: .25s;
     }
 
     &:hover {

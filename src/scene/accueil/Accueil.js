@@ -1,6 +1,6 @@
 import React from 'react'
 
-import CtaContact from '../../components/CtaContact'
+import CtaContact from '../../components/ctaContact/CtaContact'
 
 import bordeaux from '../../assets/place-de-la-bourse.jpg'
 import chrisVitu from '../../assets/christophe-vitu.png'
@@ -39,7 +39,8 @@ export default function Accueil() {
             className='id-pic'
             src={chrisVitu}
             alt="christophe vitu" />
-          <div className="presentation-detail-container">
+          {/* <div className="presentation-detail-container"> */}
+          <div className="presentation-detail-container"></div>
             <div className="presentation-detail-text paragraph-content-text">
               “ Spécialiste en gestion de patrimoine, je suis présent à vos côtés pour vous accompagner dans toutes les phases de vie de votre patrimoine: construction, développement, optimisation, transmission. ”
             </div>
@@ -51,7 +52,7 @@ export default function Accueil() {
                 expert au cabinet CAP Patrimoine
               </div>
             </div>
-          </div>
+          {/* </div> */}
         </div>
 
         <div className="characteristics">

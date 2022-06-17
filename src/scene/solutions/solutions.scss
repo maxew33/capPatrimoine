@@ -7,7 +7,7 @@
 }
 
 .solution {
-    width: 100%;    
+    width: 100%;
     height: 30rem;
     display: grid;
     grid-template: 2rem auto / 2.5fr 3fr;
@@ -38,4 +38,40 @@
     width: 30rem;
     object-fit: cover;
     justify-self: center;
+}
+
+@media screen and (max-width: 800px) {
+
+    .solution {
+        width: 100vw;
+        height: auto;
+        grid-template: repeat(3, auto) / 1fr;
+        grid-template-areas:
+            "title"
+            "img"
+            "text";
+        place-items: center;
+        padding: 0;
+        background: var(--light-grey);
+    }
+
+    .solution-title {
+        grid-area: title;
+        margin-left: 0;
+        justify-self: center;
+        padding: 2rem 0;
+    }
+
+    .solution-text {
+        grid-area: text;
+        padding: 1.5rem;
+    }
+
+    .solution-img {
+        grid-area: img;
+        height: 20rem;
+        width: 100vw;
+        object-fit: cover;
+        justify-self: center;
+    }
 }

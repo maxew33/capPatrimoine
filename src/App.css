@@ -41,20 +41,6 @@ section .banner-accueil {
   margin: 0;
 }
 
-.header {
-  position: -webkit-sticky;
-  position: sticky;
-  top: 0;
-  width: 100vw;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background: var(--medium-grey);
-  color: var(--dark-grey);
-  border-bottom: 5px solid var(--dark-grey);
-  z-index: 20;
-}
-
 .logo-container {
   margin-left: var(--margin-side);
   display: flex;
@@ -72,40 +58,6 @@ section .banner-accueil {
   transition: height 0.25s ease-in-out;
 }
 
-nav {
-  align-self: end;
-  --scale-value: 0;
-}
-nav ul {
-  display: flex;
-  justify-content: space-between;
-  width: 50vw;
-  height: 3.5vh;
-}
-nav ul li {
-  position: relative;
-  cursor: pointer;
-  font-size: 1.35rem;
-}
-nav ul li::after {
-  content: "";
-  width: 110%;
-  position: absolute;
-  border-radius: 2px;
-  bottom: -5px;
-  left: 50%;
-  height: 5px;
-  background: var(--gold);
-  transform: translateX(-50%) scaleX(var(--scale-value));
-  transition: transform 0.15s ease-in-out;
-}
-nav ul li:hover::after {
-  --scale-value: 1;
-}
-nav ul .displayed {
-  --scale-value: 1;
-}
-
 .social-network {
   margin-right: var(--margin-side);
   font-size: 2rem;
@@ -115,15 +67,15 @@ nav ul .displayed {
   position: relative;
   max-width: 1200px;
   z-index: -1;
-  height: 33vh;
+  min-height: 33vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 5rem;
+  margin: 2.5rem 0;
+  gap: 2.5rem;
 }
 
 .banner-title {
-  height: 50%;
   width: 100%;
   display: grid;
   place-content: center;
@@ -133,8 +85,8 @@ nav ul .displayed {
 }
 
 .banner-page-descr {
-  height: 50%;
   width: 80%;
+  min-height: 50%;
   background: var(--medium-grey);
   line-height: 1.5;
   font-size: 1.5rem;
@@ -190,4 +142,43 @@ nav ul .displayed {
   -o-object-fit: cover;
      object-fit: cover;
   justify-self: center;
+}
+
+@media screen and (max-width: 1200px) {
+  :root {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 1000px) {
+  :root {
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 800px) {
+  :root {
+    font-size: 12px;
+  }
+
+  .banner-title {
+    width: 100vw;
+  }
+
+  .banner-page-descr {
+    width: calc(100vw - 3rem);
+    padding: 1.5rem;
+  }
+
+  .paragraph-content-text {
+    margin: 0.5rem;
+  }
+
+  .characteristics {
+    width: 100vw;
+    height: auto;
+    padding: 1.5rem 0;
+    grid-template: repeat(3, auto)/100vw;
+    grid-template-areas: "title" "text" "img";
+    place-items: center;
+    row-gap: 0.5rem;
+  }
 }/*# sourceMappingURL=App.css.map */

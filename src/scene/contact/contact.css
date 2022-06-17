@@ -1,3 +1,7 @@
+section .banner-contact {
+  margin-top: 0;
+}
+
 .banner-img {
   height: 25vh;
   width: 100vw;
@@ -23,17 +27,28 @@
 }
 
 .contact-direct-detail {
-  width: 30%;
+  width: calc(30% - 3rem);
   aspect-ratio: 1/0.75;
   background: var(--medium-grey);
   display: grid;
+  grid-template-rows: 2fr 1fr 1fr;
   grid-template-areas: "icon" "name" "link";
   place-items: center;
   font-size: 1.5rem;
+  padding: 1.5rem;
 }
 
 .contact-direct-icon {
   font-size: 4.25rem;
+  grid-area: icon;
+}
+
+.contact-direct-name {
+  grid-area: name;
+}
+
+.contact-direct-link {
+  grid-area: link;
 }
 
 .contact-form {
@@ -120,4 +135,58 @@ textarea:valid ~ .input-txt-label {
   border-radius: 2rem;
   width: 80%;
   cursor: pointer;
+}
+
+@media screen and (max-width: 800px) {
+  .contact-direct-container {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .contact-direct-detail {
+    width: 100%;
+    aspect-ratio: auto;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 3fr;
+    grid-template-areas: "icon name" "icon link";
+    place-items: center;
+    padding: 0;
+  }
+
+  .contact-direct-icon {
+    font-size: 5rem;
+    padding: 1.5rem;
+  }
+
+  .contact-form {
+    flex-direction: column;
+    gap: 2.5rem;
+  }
+
+  .contact-form-inputs,
+.contact-form-txt-sub {
+    width: 100%;
+  }
+
+  .contact-form-input input {
+    width: 95%;
+  }
+
+  .contact-form-select {
+    width: 100%;
+  }
+
+  .contact-form-txt {
+    width: 95%;
+    padding: 5% 2.5%;
+  }
+
+  .input-txt-label {
+    left: 2.5%;
+    top: 2.5%;
+  }
+
+  .contact-form-btn {
+    width: 95%;
+  }
 }/*# sourceMappingURL=contact.css.map */

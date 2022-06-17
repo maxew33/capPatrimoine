@@ -1,5 +1,5 @@
 import React from 'react'
-import CtaContact from '../../components/CtaContact'
+import CtaContact from '../../components/ctaContact/CtaContact'
 
 import attente from '../../assets/questions.jpg'
 import reponses from '../../assets/advising.jpg'

@@ -4,4 +4,11 @@
 .cabinet-wrapper .characteristics:nth-child(even) {
   grid-template: 2rem auto/3fr 2.5fr;
   grid-template-areas: "img title" "img text";
+}
+
+@media screen and (max-width: 800px) {
+  .cabinet-wrapper .characteristics:nth-child(even) {
+    grid-template: repeat(3, auto)/100vw;
+    grid-template-areas: "title" "text" "img";
+  }
 }/*# sourceMappingURL=cabinet.css.map */

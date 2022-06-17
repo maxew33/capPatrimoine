@@ -1,0 +1,201 @@
+.header {
+    position: sticky;
+    top: 0;
+    width: 100vw;
+    // height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--medium-grey);
+    color: var(--dark-grey);
+    border-bottom: 5px solid var(--dark-grey);
+    z-index: 20;
+}
+
+.burger-header{
+    display: none;
+}
+
+nav {
+    align-self: end;
+    --scale-value: 0;
+
+    ul {
+        display: flex;
+        justify-content: space-between;
+        width: 50vw;
+        height: 3.5vh;
+
+        li {
+            position: relative;
+            cursor: pointer;
+            font-size: 1.35rem;
+
+            &::after {
+                content: "";
+                width: 110%;
+                position: absolute;
+                border-radius: 2px;
+                bottom: -5px;
+                left: 50%;
+                height: 5px;
+                background: var(--gold);
+                transform: translateX(-50%) scaleX(var(--scale-value));
+                transition: transform 0.15s ease-in-out;
+            }
+
+            &:hover::after {
+                --scale-value: 1;
+            }
+        }
+
+        .displayed {
+            --scale-value: 1;
+        }
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .header {
+        --translate-value: calc(45vw + 2px);
+
+        width: 40vw;
+        height: 100vh;
+        position: fixed;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-around;
+        background: hsl(0deg, 0%, 96%, 0.75);
+        backdrop-filter: blur(5px);
+        border: 0;
+        border-left: 2px solid var(--dark-grey);
+        z-index: 50;
+        padding-left: 5vw;
+        transform: translateX(var(--translate-value));
+        transition: transform 0.5s ease-in-out;
+    }
+
+    .logo-container{
+        display: none;
+    }
+
+    .slide-in{
+        --translate-value: 0;
+    }
+
+    nav {
+        align-self: start;
+        height: 50%;
+
+        ul {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            width: auto;
+            height: 100%;
+
+            li {
+                position: relative;
+                cursor: pointer;
+                font-size: 2rem;
+                width: fit-content;
+                padding-bottom: 0.5rem;
+
+                &::after {
+                    content: "";
+                    width: 110%;
+                    position: absolute;
+                    border-radius: 2px;
+                    bottom: -5px;
+                    left: 50%;
+                    height: 5px;
+                    background: var(--gold);
+                    transform: translateX(-50%) scaleX(var(--scale-value));
+                    transition: transform 0.15s ease-in-out;
+                }
+
+                &:hover::after {
+                    --scale-value: 1;
+                }
+            }
+
+            .displayed {
+                --scale-value: 1;
+            }
+        }
+    }
+
+    .burger-header{
+        position: sticky;
+        top: 0;
+        background: var(--medium-grey);
+        display: flex;
+        align-items: center;
+        text-align: center;
+        gap: 1.5rem;
+        padding: .5rem ;
+        font-size: 1.75rem;
+        font-weight: bold;
+        border-bottom: 2px solid var(--dark-grey);
+        z-index: 20;
+    }
+
+    .burger-header-logo{
+        height: 3.5rem;
+    }
+    .burger-header-name{
+        text-align: center;
+        width: calc(100vw - 12rem);
+    }
+
+    .burger-container {
+        position: fixed;
+        top: 1rem;
+        right: 1rem;
+        height: 2.5rem;
+        width: 3rem;
+        cursor: pointer;
+        z-index: 100;
+        display: grid;
+        place-content: center;
+    }
+
+    .burger {
+        position: relative;
+        background: var(--dark-grey);
+    }
+
+    .burger,
+    .burger::after,
+    .burger::before {
+        width: 3rem;
+        height: .35rem;
+        border-radius: 10rem;
+        transition: transform 0.25s ease-in, background-color 0.25s ease-in-out;
+    }
+
+    .burger::after,
+    .burger::before {
+        content: "";
+        position: absolute;
+        background: var(--dark-grey);
+    }
+
+    .burger::before {
+        top: -1rem;
+        transform: translateY(var(--translate-value)) rotate(var(--angle-rotation));
+    }
+
+    .burger::after {
+        top: 1rem;
+        transform: translateY(calc(var(--translate-value) * -1)) rotate(calc(var(--angle-rotation) * -1));
+    }
+
+    .open {
+        --angle-rotation: 225deg;
+        --translate-value: 1rem;
+        background: rgba(217, 217, 217, 0);
+    }
+}

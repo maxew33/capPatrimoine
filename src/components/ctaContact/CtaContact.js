@@ -1,9 +1,9 @@
 import React from 'react'
 
 import { useDispatch } from 'react-redux'
-import { changePage } from '../redux/changePage'
+import { changePage } from '../../redux/changePage'
 
-import '../style/ctaContact.css'
+import './ctaContact.css'
 
 export default function CtaContact() {
 

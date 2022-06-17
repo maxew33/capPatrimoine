@@ -1,12 +1,12 @@
 import React from 'react'
-import '../style/footer.css'
+import './footer.css'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faLinkedinIn } from '@fortawesome/free-brands-svg-icons'
 
-import logo from '../assets/logo.png'
+import logo from '../../assets/logo.png'
 import { useDispatch } from 'react-redux'
-import { changePage } from '../redux/changePage'
+import { changePage } from '../../redux/changePage'
 
 export default function Footer() {
 
