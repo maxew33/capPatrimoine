@@ -26,6 +26,7 @@
 }
 
 .partners-carousel {
+  --slide-speed: 0s;
   position: relative;
   height: 5rem;
   overflow: hidden;
@@ -43,7 +44,6 @@
 }
 
 .carousel-content {
-  --slide-speed: 0s;
   --x-begin: -100%;
   position: absolute;
   display: flex;
