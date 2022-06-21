@@ -25,6 +25,8 @@
     border-radius: 999px;
     font-size: 2.5rem;
     border: none;
+    border: 1px solid var(--dark-grey);
+    transition: background-color .125s ease-in-out;
 
     &::before,
     &::after {
@@ -37,7 +39,7 @@
         border: 1px solid var(--dark-grey);
         border-radius: inherit;
         transform-origin: center;
-        transform: translate(-50%, -50%) scale(0.9);
+        transform: translate(-50%, -50%) scale(1);
         animation: 4s pulse linear infinite;
     }
 
@@ -46,53 +48,25 @@
     }
 
     &:hover {
-        overflow: hidden;
-    }
-
-    &:hover::after,
-    &:hover::before {
-        width: 15%;
-        height: 150%;
-        top: 0%;
-        left: -10%;
-        transform: translate(-5vw, 0%) rotate(-15deg);
-        animation: 1.5s swipe cubic-bezier(1, 0.4, 1, 0.4) infinite;
-        border: none;
-        border-radius: 0;
-        background: linear-gradient(90deg, transparent, var(--gold));
-        // opacity: 0.25;
-    }
-
-    &:hover::after {
-        animation-delay: 0.25s;
+        color: var(--dark-grey);
+        background: var(--light-grey);
     }
 }
 
 @keyframes pulse {
     0%,
     70% {
-        transform: translate(-50%, -50%) scale(0.9);
+        transform: translate(-50%, -50%) scale(1);
         opacity: 1;
     }
 
     85% {
-        transform: translate(-50%, -50%) scale(1.2);
+        transform: translate(-50%, -50%) scale(1.25);
         opacity: 0.25;
     }
 
     100% {
         transform: translate(-50%, -50%) scale(1.5);
         opacity: 0;
-    }
-}
-
-@keyframes swipe {
-    0% {
-        transform: translate(-5vw, 0) rotate(-15deg);
-    }
-
-    40%,
-    100% {
-        transform: translate(60vw, 0) rotate(-15deg);
     }
 }

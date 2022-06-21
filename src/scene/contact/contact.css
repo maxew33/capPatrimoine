@@ -135,6 +135,12 @@ textarea:valid ~ .input-txt-label {
   border-radius: 2rem;
   width: 80%;
   cursor: pointer;
+  font-size: 1.75rem;
+  transition: background-color 0.125s ease-in-out;
+}
+.contact-form-btn:hover {
+  background: var(--light-grey);
+  color: var(--dark-grey);
 }
 
 @media screen and (max-width: 800px) {

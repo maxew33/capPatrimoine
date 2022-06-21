@@ -12,13 +12,13 @@ import { immoLogo, placementLogo, financementLogo } from '../../data/partnersLog
 
 export default function Partenaires() {
 
-    const carouselContainer = useRef([])
+  const carouselContainer = useRef([])
 
-    const carouselContent = useRef([])
+  const carouselContent = useRef([])
 
-    // const [carouselSpeed, setCarouselSpeed] = useState([0,0,0])
+  // const [carouselSpeed, setCarouselSpeed] = useState([0,0,0])
 
-    const [imgAreLoaded, setImgAreLoaded] = useState([0,0,0])
+  const [imgAreLoaded, setImgAreLoaded] = useState([0, 0, 0])
 
   const partnersContent = [{
     name: 'Immobilier',
@@ -36,6 +36,10 @@ export default function Partenaires() {
     logos: financementLogo
   }]
 
+
+  useEffect(() => {
+    console.log('tada')
+  }, [imgAreLoaded])
   // useEffect(() => {
 
   //   // const carouselContent = Array.from(document.querySelectorAll('.carousel-content'))
@@ -55,8 +59,9 @@ export default function Partenaires() {
   // }, [carouselSpeed])
 
   const setMySpeed = (idx) => {
-    const mySpeed = carouselContent.current[idx].getBoundingClientRect().width / 75
-    carouselContainer.current[idx].style.setProperty('--slide-speed', mySpeed + 's')
+    const mySpeed = carouselContent.current[idx].getBoundingClientRect().width / 70
+    setTimeout(() => { carouselContainer.current[idx].style.setProperty('--slide-speed', mySpeed + 's') }, 100)
+
   }
 
   const imgLoaded = (name, idx) => {
@@ -64,9 +69,9 @@ export default function Partenaires() {
     const myState = imgAreLoaded
     myState[idx] += 1
     setImgAreLoaded(myState)
-    
+
     // myState[idx] === partnersContent[idx].logos.length*2 && console.log(partnersContent[idx].name + 'loaded')
-    myState[idx] === partnersContent[idx].logos.length*2 && setMySpeed(idx)
+    myState[idx] === partnersContent[idx].logos.length * 2 && setMySpeed(idx)
   }
 
   return (
@@ -93,49 +98,49 @@ export default function Partenaires() {
 
 
         {
-        partnersContent.map((content, idx) => {
-          return (
-            <div className="partners"
-              key={idx}>
-              <div className="partners-banner">
-                <img
-                  className="partners-banner-icon"
-                  src={logo}
-                  alt="boussole" />
-                <div className="partners-banner-title">
-                  {content.name}
+          partnersContent.map((content, idx) => {
+            return (
+              <div className="partners"
+                key={idx}>
+                <div className="partners-banner">
+                  <img
+                    className="partners-banner-icon"
+                    src={logo}
+                    alt="boussole" />
+                  <div className="partners-banner-title">
+                    {content.name}
+                  </div>
+                </div>
+                <div className="partners-intro">
+                  {content.intro}
+                </div>
+                <div className="partners-carousel"
+                  ref={elt => carouselContainer.current[idx] = elt}>
+                  {
+                    [0, 1].map(index => {
+                      return (
+                        <div className={
+                          idx === 1 ? "carousel-content carousel-content-reversed" : "carousel-content"}
+                          key={'logo' + index}
+                          ref={elt => carouselContent.current[idx] = elt}
+                        >
+                          {
+                            content.logos.map(logo => {
+                              return (<img
+                                key={logo.id}
+                                src={logo.link}
+                                alt={logo.name}
+                                onLoad={() => imgLoaded(logo.name, idx)} />)
+                            })
+                          }
+                        </div>
+                      )
+                    })
+                  }
                 </div>
               </div>
-              <div className="partners-intro">
-                {content.intro}
-              </div>
-              <div className="partners-carousel"
-              ref = {elt => carouselContainer.current[idx] = elt}>
-                {
-                  [0,1].map( index => {
-                    return (
-                      <div className={
-                        idx === 1 ? "carousel-content carousel-content-reversed" : "carousel-content"}
-                        key = {'logo' + index}
-                        ref = {elt => carouselContent.current[idx] = elt}
-                        >
-                        {
-                          content.logos.map(logo => {
-                            return (<img
-                              key={logo.id}
-                              src={logo.link}
-                              alt={logo.name} 
-                              onLoad={() => imgLoaded(logo.name, idx)} />)
-                          })
-                        }
-                      </div>
-                    )
-                  })
-                }
-              </div>
-            </div>
-          )
-        })}
+            )
+          })}
 
 
         {/* <div className="partners">

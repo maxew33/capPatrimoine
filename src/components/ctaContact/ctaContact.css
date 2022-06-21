@@ -25,6 +25,8 @@
   border-radius: 999px;
   font-size: 2.5rem;
   border: none;
+  border: 1px solid var(--dark-grey);
+  transition: background-color 0.125s ease-in-out;
 }
 .contact-link-button::before, .contact-link-button::after {
   content: "";
@@ -36,7 +38,7 @@
   border: 1px solid var(--dark-grey);
   border-radius: inherit;
   transform-origin: center;
-  transform: translate(-50%, -50%) scale(0.9);
+  transform: translate(-50%, -50%) scale(1);
   -webkit-animation: 4s pulse linear infinite;
           animation: 4s pulse linear infinite;
 }
@@ -45,32 +47,17 @@
           animation-delay: 0.25s;
 }
 .contact-link-button:hover {
-  overflow: hidden;
-}
-.contact-link-button:hover::after, .contact-link-button:hover::before {
-  width: 15%;
-  height: 150%;
-  top: 0%;
-  left: -10%;
-  transform: translate(-5vw, 0%) rotate(-15deg);
-  -webkit-animation: 1.5s swipe cubic-bezier(1, 0.4, 1, 0.4) infinite;
-          animation: 1.5s swipe cubic-bezier(1, 0.4, 1, 0.4) infinite;
-  border: none;
-  border-radius: 0;
-  background: linear-gradient(90deg, transparent, var(--gold));
-}
-.contact-link-button:hover::after {
-  -webkit-animation-delay: 0.25s;
-          animation-delay: 0.25s;
+  color: var(--dark-grey);
+  background: var(--light-grey);
 }
 
 @-webkit-keyframes pulse {
   0%, 70% {
-    transform: translate(-50%, -50%) scale(0.9);
+    transform: translate(-50%, -50%) scale(1);
     opacity: 1;
   }
   85% {
-    transform: translate(-50%, -50%) scale(1.2);
+    transform: translate(-50%, -50%) scale(1.25);
     opacity: 0.25;
   }
   100% {
@@ -81,31 +68,15 @@
 
 @keyframes pulse {
   0%, 70% {
-    transform: translate(-50%, -50%) scale(0.9);
+    transform: translate(-50%, -50%) scale(1);
     opacity: 1;
   }
   85% {
-    transform: translate(-50%, -50%) scale(1.2);
+    transform: translate(-50%, -50%) scale(1.25);
     opacity: 0.25;
   }
   100% {
     transform: translate(-50%, -50%) scale(1.5);
     opacity: 0;
-  }
-}
-@-webkit-keyframes swipe {
-  0% {
-    transform: translate(-5vw, 0) rotate(-15deg);
-  }
-  40%, 100% {
-    transform: translate(60vw, 0) rotate(-15deg);
-  }
-}
-@keyframes swipe {
-  0% {
-    transform: translate(-5vw, 0) rotate(-15deg);
-  }
-  40%, 100% {
-    transform: translate(60vw, 0) rotate(-15deg);
   }
 }/*# sourceMappingURL=ctaContact.css.map */

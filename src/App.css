@@ -42,6 +42,7 @@ section .banner-accueil {
 }
 
 .logo-container {
+  cursor: pointer;
   margin-left: var(--margin-side);
   display: flex;
   align-items: center;
