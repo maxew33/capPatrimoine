@@ -21,12 +21,24 @@ export default function Footer() {
   return (
     <div className='footer'>
 
-      <div className="logo-container">
+      {/* <div className="logo-container"
+        onClick={() => dispatch(changePage(0))}>
         <img className="logo-container-img"
           src={logo}
           alt="cabinet cap patrimoine" />
         <div className="logo-container-name">
           Cabinet CAP Patrimoine
+        </div>
+      </div> */}
+
+      <div className="footer-logo-container" onClick={() => dispatch(changePage(0))}>
+        <img className="footer-logo-container-img"
+          src={logo}
+          alt="cabinet cap patrimoine" />
+        <div className="footer-logo-container-name">
+          Cabinet CAP Patrimoine
+          <br />
+          Conseil en gestion de patrimoine.
         </div>
       </div>
 

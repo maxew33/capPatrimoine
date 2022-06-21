@@ -4,8 +4,23 @@
   border-top: 5px solid var(--dark-grey);
   align-items: center;
   justify-content: space-between;
+  padding: 1rem 0;
+}
+.footer > div {
+  cursor: pointer;
 }
 
-.legal-notice-link, .contact-us {
-  cursor: pointer;
+.footer-logo-container {
+  margin-left: var(--margin-side);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+}
+
+.footer-logo-container-img {
+  height: 2.5rem;
+  padding: 0.25rem 0;
+  -o-object-fit: contain;
+     object-fit: contain;
 }/*# sourceMappingURL=footer.css.map */

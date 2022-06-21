@@ -41,22 +41,26 @@ export default function Header(props) {
 
   const handleClick = () => {
     const burger = document.querySelector('.burger'),
-    header = document.querySelector('.header')
+      header = document.querySelector('.header')
 
     burger.classList.toggle('open')
-    header.classList.toggle('slide-in')  
+    header.classList.toggle('slide-in')
+  }
+
+  const handleClickAccueil = () => {
+
   }
 
   return (
     <>
 
       <div className="burger-header">
-          <img className="burger-header-logo"
-            src={logo}
-            alt="cabinet cap patrimoine" />
-          <div className="burger-header-name">
-            Cabinet CAP Patrimoine
-          </div>
+        <img className="burger-header-logo"
+          src={logo}
+          alt="cabinet cap patrimoine" />
+        <div className="burger-header-name">
+          Cabinet CAP Patrimoine
+        </div>
       </div>
 
       <div className="burger-container"
@@ -66,7 +70,8 @@ export default function Header(props) {
 
       <div className="header">
 
-        <div className="logo-container">
+        <div className="logo-container"
+          onClick={() => dispatch(changePage(0))}>
           <img className="logo-container-img header-logo"
             src={logo}
             alt="cabinet cap patrimoine" />
