@@ -1,13 +1,41 @@
-import React from 'react'
+
+import { useRef } from 'react'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faLinkedinIn } from '@fortawesome/free-brands-svg-icons'
 import { faPhone, faEnvelope } from '@fortawesome/free-solid-svg-icons'
 import pen from '../../assets/pen.webp'
 
+import emailjs from '@emailjs/browser'
+
+
+
 import './contact.css'
 
 export default function Contact() {
+
+  
+
+  const form = useRef()
+
+  const sendEmail = e => {
+    e.preventDefault()
+
+    console.log(process.env.REACT_APP_EMAILKEY_USER_ID)
+    
+    emailjs.sendForm(
+      process.env.REACT_APP_EMAILKEY_SERVICE_ID,
+      process.env.REACT_APP_EMAILKEY_TEMPLATE_ID,
+      form.current,
+      process.env.REACT_APP_EMAILKEY_USER_ID)
+    .then((result) => {
+        console.log(result.text);
+    }, (error) => {
+        console.error(error.text);
+    });
+  }
+
+
   return (
     <section>
 
@@ -77,12 +105,14 @@ export default function Contact() {
 
           <form
             className='contact-form'
-            action="">
+            onSubmit={sendEmail}
+            ref={form}>
             <div className="contact-form-inputs">
               <div className="contact-form-input">
                 <input id="lastname-input"
                   type="text"
-                  name="user-lastname"
+                  // name="user-lastname"
+                  name="from_name"
                   required />
                 <label
                   className="input-txt-label"
@@ -101,7 +131,7 @@ export default function Contact() {
                 <input
                   id="email-input"
                   type="email"
-                  name="user-email"
+                  name="user_email"
                   required />
                 <label
                   className="input-txt-label"
@@ -124,7 +154,7 @@ export default function Contact() {
             <div className="contact-form-txt-sub">
               <textarea
                 className='contact-form-txt'
-                name=""
+                name="message"
                 id="message-form"
                 cols="30"
                 rows="10"
@@ -133,7 +163,7 @@ export default function Contact() {
               <label
                 className="input-txt-label"
                 htmlFor="message-form">message</label>
-              <button className='contact-form-btn'>
+              <button type='submit' value='send' className='contact-form-btn'>
                 Envoyer
               </button>
             </div>

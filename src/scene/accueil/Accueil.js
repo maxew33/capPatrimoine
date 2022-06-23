@@ -2,13 +2,13 @@ import React from 'react'
 
 import CtaContact from '../../components/ctaContact/CtaContact'
 
-import bordeaux from '../../assets/place-de-la-bourse.webp'
-import chrisVitu from '../../assets/christophe-vitu.webp'
-import hands from '../../assets/hands.webp'
-import user1 from '../../assets/client-1.webp'
-import user2 from '../../assets/client-2.webp'
-import user3 from '../../assets/client-3.webp'
-import user4 from '../../assets/client-4.webp'
+import bordeaux from '../../assets/bordeaux.webp'
+import chrisVitu from '../../assets/christopheVitu.webp'
+import hands from '../../assets/handsShake.webp'
+import user1 from '../../assets/client1.webp'
+import user2 from '../../assets/client2.webp'
+import user3 from '../../assets/client3.webp'
+import user4 from '../../assets/client4.webp'
 
 import './accueil.css'
 
