@@ -1,8 +1,8 @@
 import React from 'react'
 import CtaContact from '../../components/ctaContact/CtaContact'
 
-import financialSavings from '../../assets/greenplant.jpg'
-import realEstateSavings from '../../assets/keys.jpg'
+import financialSavings from '../../assets/greenplant.webp'
+import realEstateSavings from '../../assets/keys.webp'
 
 import './solutions.css'
 

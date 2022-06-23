@@ -16,6 +16,23 @@
     display: none;
 }
 
+.click-outside{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: hsl(0deg, 0%, 100%, .05);
+    backdrop-filter: blur(2.5px);
+    z-index: 15;
+    cursor: pointer;
+
+    &.display{
+        display: block;
+    }
+}
+
 nav {
     align-self: end;
     --scale-value: 0;

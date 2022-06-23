@@ -2,13 +2,13 @@ import React from 'react'
 
 import CtaContact from '../../components/ctaContact/CtaContact'
 
-import bordeaux from '../../assets/place-de-la-bourse.jpg'
-import chrisVitu from '../../assets/christophe-vitu.png'
-import hands from '../../assets/hands.jpg'
-import user1 from '../../assets/client-1.jpg'
-import user2 from '../../assets/client-2.jpg'
-import user3 from '../../assets/client-3.jpg'
-import user4 from '../../assets/client-4.jpg'
+import bordeaux from '../../assets/place-de-la-bourse.webp'
+import chrisVitu from '../../assets/christophe-vitu.webp'
+import hands from '../../assets/hands.webp'
+import user1 from '../../assets/client-1.webp'
+import user2 from '../../assets/client-2.webp'
+import user3 from '../../assets/client-3.webp'
+import user4 from '../../assets/client-4.webp'
 
 import './accueil.css'
 

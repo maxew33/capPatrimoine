@@ -1,6 +1,6 @@
-import React from 'react'
+import React, { useRef } from 'react'
 
-import logo from '../../assets/logo.png'
+import logo from '../../assets/logoCapPatrimoine.webp'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faLinkedinIn } from '@fortawesome/free-brands-svg-icons'
@@ -21,6 +21,10 @@ export default function Header(props) {
 
   const dispatch = useDispatch()
 
+  const burger = useRef()
+  const header = useRef()
+  const outsideClick = useRef()
+
   const setLogoSize = () => {
 
     const myLogo = document.querySelector('.header-logo')
@@ -40,15 +44,9 @@ export default function Header(props) {
   window.addEventListener('scroll', setLogoSize)
 
   const handleClick = () => {
-    const burger = document.querySelector('.burger'),
-      header = document.querySelector('.header')
-
-    burger.classList.toggle('open')
-    header.classList.toggle('slide-in')
-  }
-
-  const handleClickAccueil = () => {
-
+    burger.current.classList.toggle('open')
+    header.current.classList.toggle('slide-in')
+    outsideClick.current.classList.toggle('display')
   }
 
   return (
@@ -65,10 +63,19 @@ export default function Header(props) {
 
       <div className="burger-container"
         onClick={handleClick}>
-        <div className="burger"></div>
+        <div className="burger" 
+        ref={burger}>
+
+        </div>
       </div>
 
-      <div className="header">
+      <div className="click-outside"
+      ref={outsideClick}
+        onClick={handleClick}>
+
+        </div>
+
+      <div className="header" ref={header}>
 
         <div className="logo-container"
           onClick={() => dispatch(changePage(0))}>

@@ -1,10 +1,10 @@
 import React from 'react'
 import CtaContact from '../../components/ctaContact/CtaContact'
 
-import attente from '../../assets/questions.jpg'
-import reponses from '../../assets/advising.jpg'
-import accompagnement from '../../assets/working-process.jpg'
-import expertise from '../../assets/raising-graph.jpg'
+import attente from '../../assets/questions.webp'
+import reponses from '../../assets/advising.webp'
+import accompagnement from '../../assets/working-process.webp'
+import expertise from '../../assets/raising-graph.webp'
 
 import './cabinet.css'
 

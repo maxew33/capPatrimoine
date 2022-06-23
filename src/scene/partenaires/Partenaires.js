@@ -1,8 +1,7 @@
 import React, { useState } from 'react'
 import CtaContact from '../../components/ctaContact/CtaContact'
 
-import logo from '../../assets/logo.png'
-import jigsaw from '../../assets/jigsaw.jpg'
+import logo from '../../assets/logoCapPatrimoine.webp'
 
 
 import './partenaires.css'

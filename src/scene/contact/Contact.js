@@ -3,7 +3,7 @@ import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faLinkedinIn } from '@fortawesome/free-brands-svg-icons'
 import { faPhone, faEnvelope } from '@fortawesome/free-solid-svg-icons'
-import pen from '../../assets/pen.jpg'
+import pen from '../../assets/pen.webp'
 
 import './contact.css'
 

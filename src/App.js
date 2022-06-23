@@ -6,7 +6,6 @@ import Solutions from './scene/solutions/Solutions'
 import Partenaires from './scene/partenaires/Partenaires'
 import Contact from './scene/contact/Contact'
 import MentionsLegales from './scene/mentionsLegales/MentionsLegales'
-import TransitionSlide from './components/transition/TransitionSlide';
 
 import Header from './components/header/Header'
 import Footer from './components/footer/Footer'

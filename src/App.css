@@ -156,10 +156,6 @@ section .banner-accueil {
   }
 }
 @media screen and (max-width: 800px) {
-  :root {
-    font-size: 12px;
-  }
-
   .banner-title {
     width: 100vw;
   }
@@ -181,5 +177,10 @@ section .banner-accueil {
     grid-template-areas: "title" "text" "img";
     place-items: center;
     row-gap: 0.5rem;
+  }
+}
+@media screen and (max-width: 400px) {
+  :root {
+    font-size: 10px;
   }
 }/*# sourceMappingURL=App.css.map */

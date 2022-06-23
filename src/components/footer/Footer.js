@@ -4,7 +4,7 @@ import './footer.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faLinkedinIn } from '@fortawesome/free-brands-svg-icons'
 
-import logo from '../../assets/logo.png'
+import logo from '../../assets/logoCapPatrimoine.webp'
 import { useDispatch } from 'react-redux'
 import { changePage } from '../../redux/changePage'
 
