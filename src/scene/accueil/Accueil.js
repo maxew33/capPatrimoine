@@ -2,7 +2,7 @@ import React from 'react'
 
 import CtaContact from '../../components/ctaContact/CtaContact'
 
-import bordeaux from '../../assets/bordeaux.webp'
+import bordeaux from '../../assets/bordeaux2.webp'
 import chrisVitu from '../../assets/christopheVitu.webp'
 import hands from '../../assets/handsShake.webp'
 import user1 from '../../assets/client1.webp'

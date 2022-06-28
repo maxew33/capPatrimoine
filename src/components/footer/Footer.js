@@ -52,6 +52,15 @@ export default function Footer() {
         Contactez-nous
       </div>
 
+      <div>
+        <a href="https://www.maxime-malfilatre.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="link to webmaster">
+            Site crée par Maxime Malfilâtre
+        </a>
+      </div>
+
       <div className="social-network">
         <a href="https://www.linkedin.com/in/christophe-vitu/"
           target="_blank"

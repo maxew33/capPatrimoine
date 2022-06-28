@@ -6,7 +6,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: var(--medium-grey);
+    background: linear-gradient(var(--light-grey), var(--medium-grey));
     color: var(--dark-grey);
     border-bottom: 5px solid var(--dark-grey);
     z-index: 20;

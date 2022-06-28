@@ -1,6 +1,6 @@
 .footer {
     display: flex;
-    background: var(--medium-grey);
+    background: linear-gradient(var(--medium-grey), var(--light-grey));
     border-top: 5px solid var(--dark-grey);
     align-items: center;
     justify-content: space-between;
@@ -20,6 +20,7 @@
 
 .footer-logo-container-img {
     height: 2.5rem;
+    aspect-ratio: 1;
     padding: 0.25rem 0;
     object-fit: contain;
 }

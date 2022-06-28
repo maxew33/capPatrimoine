@@ -5,8 +5,8 @@
   z-index: -1;
 }
 .banner-illus img {
-  height: inherit;
-  width: inherit;
+  height: 33vh;
+  width: 100vw;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -15,7 +15,7 @@
   height: 50%;
   position: absolute;
   bottom: 0;
-  background: radial-gradient(ellipse at center, hsl(0deg, 0%, 100%) 10%, hsla(0deg, 0%, 100%, 0));
+  background: radial-gradient(ellipse at center, hsla(0deg, 0%, 100%, 0.5) 10%, hsla(0deg, 0%, 100%, 0) 75%);
 }
 
 .banner-accueil .banner-title {

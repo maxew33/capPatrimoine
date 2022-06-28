@@ -5,8 +5,8 @@
     z-index: -1;
 
     img {
-        height: inherit;
-        width: inherit;
+        height: 33vh;
+        width: 100vw;
         object-fit: cover;
     }
 
@@ -15,7 +15,7 @@
         height: 50%;
         position: absolute;
         bottom: 0;
-        background: radial-gradient(ellipse at center, hsl(0deg, 0%, 100%, 1) 10%, hsl(0deg, 0%, 100%, 0));
+        background: radial-gradient(ellipse at center, hsl(0deg, 0%, 100%, .5) 10%, hsl(0deg, 0%, 100%, 0) 75%);
     }
 }
 
