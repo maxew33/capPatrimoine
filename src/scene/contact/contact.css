@@ -143,6 +143,56 @@ textarea:valid ~ .input-txt-label {
   color: var(--dark-grey);
 }
 
+.contact-form-sent {
+  display: none;
+  place-content: center;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: hsla(0deg, 0%, 0%, 0.25);
+  opacity: 0;
+  transition: 0.125s opacity ease-in-out;
+  -webkit-backdrop-filter: blur(2px);
+          backdrop-filter: blur(2px);
+  z-index: 150;
+}
+.contact-form-sent .contact-form-sent-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 75vw;
+  height: 75vh;
+  align-items: center;
+  justify-content: center;
+  gap: 5rem;
+  background: linear-gradient(var(--light-grey), var(--medium-grey));
+  border: 2px solid var(--dark-grey);
+  font-size: 2rem;
+}
+.contact-form-sent .contact-form-sent-message {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+.contact-form-sent .contact-form-sent-message img {
+  width: 4rem;
+}
+.contact-form-sent .contact-form-sent-button {
+  background-color: var(--dark-grey);
+  border: none;
+  border-radius: 2rem;
+  color: var(--light-grey);
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  font-size: 2rem;
+}
+.contact-form-sent .contact-form-sent-button:hover {
+  background: var(--medium-grey);
+  color: var(--dark-grey);
+}
+
 @media screen and (max-width: 800px) {
   .contact-direct-container {
     flex-direction: column;

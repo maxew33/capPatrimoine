@@ -5,34 +5,39 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faLinkedinIn } from '@fortawesome/free-brands-svg-icons'
 import { faPhone, faEnvelope } from '@fortawesome/free-solid-svg-icons'
 import pen from '../../assets/pen.webp'
+import logo from '../../assets/logoCapPatrimoine.webp'
 
 import emailjs from '@emailjs/browser'
-
-
 
 import './contact.css'
 
 export default function Contact() {
 
-  
-
   const form = useRef()
+  const success = useRef()
 
   const sendEmail = e => {
     e.preventDefault()
 
     console.log(process.env.REACT_APP_EMAILKEY_USER_ID)
-    
+
     emailjs.sendForm(
       process.env.REACT_APP_EMAILKEY_SERVICE_ID,
       process.env.REACT_APP_EMAILKEY_TEMPLATE_ID,
       form.current,
       process.env.REACT_APP_EMAILKEY_USER_ID)
-    .then((result) => {
-        console.log(result.text);
-    }, (error) => {
+      .then(() => {
+        form.current.reset()
+        success.current.style.display = "grid"
+        success.current.style.opacity = 1
+      }, error => {
         console.error(error.text);
-    });
+      });
+  }
+
+  const handleClick = () => {
+    success.current.style.opacity = 0
+    setTimeout(() => { success.current.style.display = "none" }, 125)
   }
 
 
@@ -76,9 +81,10 @@ export default function Contact() {
               <div className="contact-direct-name">
                 écrivez-nous
               </div>
-              <div className="contact-direct-link">
+              <a href="mailto:cvconseilgestionpatrimoine@gmail.com"
+                className="contact-direct-link">
                 cvconseilgestionpatrimoine<br />@gmail.com
-              </div>
+              </a>
             </div>
             <div className="contact-direct-detail">
               <div className="contact-direct-icon">
@@ -100,7 +106,7 @@ export default function Contact() {
 
         <div className="contact contact-form">
           <div className="contact-title contact-form-title">
-            ou en complétant le formulaire
+            Ou en complétant le formulaire
           </div>
 
           <form
@@ -112,7 +118,7 @@ export default function Contact() {
                 <input id="lastname-input"
                   type="text"
                   // name="user-lastname"
-                  name="from_name"
+                  name="from_lastname"
                   required />
                 <label
                   className="input-txt-label"
@@ -121,7 +127,7 @@ export default function Contact() {
               <div className="contact-form-input">
                 <input id="firstname-input"
                   type="text"
-                  name="user-firstname"
+                  name="from_firstname"
                   required />
                 <label
                   className="input-txt-label"
@@ -140,13 +146,13 @@ export default function Contact() {
 
               <select
                 className='contact-form-select'
-                name=""
+                name="user_object"
                 id="">
                 <option value="">motif</option>
-                <option value="">demande de rendez-vous</option>
-                <option value="">audit financier</option>
-                <option value="">audit immobilier</option>
-                <option value="">autre</option>
+                <option value="demande de rendez-vous">demande de rendez-vous</option>
+                <option value="audit financier">audit financier</option>
+                <option value="audit immobilier">audit immobilier</option>
+                <option value="autre">autre</option>
 
               </select>
             </div>
@@ -168,6 +174,26 @@ export default function Contact() {
               </button>
             </div>
           </form>
+        </div>
+
+        <div className="contact-form-sent"
+          ref={success}>
+          <div className="contact-form-sent-wrapper">
+
+            <div className="contact-form-sent-message">
+              <img className="contact-form-sent-logo"
+                src={logo}
+                alt="cabinet cap patrimoine" />
+              <div>
+                Message envoyé.
+              </div>
+            </div>
+            <button
+              className='contact-form-sent-button'
+              onClick={handleClick}>
+              OK
+            </button>
+          </div>
         </div>
 
       </div>

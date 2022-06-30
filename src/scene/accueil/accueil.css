@@ -15,7 +15,7 @@
   height: 50%;
   position: absolute;
   bottom: 0;
-  background: radial-gradient(ellipse at center, hsla(0deg, 0%, 100%, 0.5) 10%, hsla(0deg, 0%, 100%, 0) 75%);
+  background: radial-gradient(ellipse at center, hsla(0deg, 0%, 100%, 0.75) 10%, hsla(0deg, 0%, 100%, 0) 75%);
 }
 
 .banner-accueil .banner-title {

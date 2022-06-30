@@ -24,3 +24,17 @@
     padding: 0.25rem 0;
     object-fit: contain;
 }
+
+.footer-logo-container-name {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 2.5rem;
+}
+
+@media (max-width: 800px) {
+    .footer {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+}

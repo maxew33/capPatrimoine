@@ -36,9 +36,12 @@ export default function Footer() {
           src={logo}
           alt="cabinet cap patrimoine" />
         <div className="footer-logo-container-name">
-          Cabinet CAP Patrimoine
-          <br />
-          Conseil en gestion de patrimoine.
+          <div>
+            Cabinet CAP Patrimoine
+          </div>
+          <div>
+            Conseil en gestion de patrimoine.
+          </div>
         </div>
       </div>
 
@@ -57,7 +60,7 @@ export default function Footer() {
           target="_blank"
           rel="noopener noreferrer"
           aria-label="link to webmaster">
-            Site crée par Maxime Malfilâtre
+          Site crée par Maxime Malfilâtre
         </a>
       </div>
 
