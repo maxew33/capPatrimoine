@@ -86,6 +86,10 @@ section .banner-contact {
 .contact-form-select,
 .contact-form-txt {
     background: var(--medium-grey);
+    font-family: var(--font-fam2);
+    font-size: 1.15rem;
+    color: var(--dark-grey);
+    line-height: 1.25;
 }
 
 .contact-form-input {
