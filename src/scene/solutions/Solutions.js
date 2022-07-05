@@ -16,7 +16,7 @@ export default function Solutions() {
           Nos solutions
         </div>
         <div className="banner-page-descr">
-          Videre haec redeundum serium admodum ardore agi mirum plebem serium cum mirum ergo dimicationum textum mirum haec dimicationum memorabile admodum quodam permittunt pendentem plebem mirum nihil serium innumeram infuso serium textum pendentem.
+          Les solutions proposées ne sont que l’aboutissement du chemin parcouru ensemble, chemin à travers lequel vos problématiques, vos besoins et attentes sont mis en avant.
         </div>
       </div>
 
@@ -32,7 +32,7 @@ export default function Solutions() {
             src={financialSavings}
             alt="épargne financière" />
           <div className="solution-text paragraph-content-text">
-            Assurance vie, Contrat de capitalisation. Multigestionnaire, à architecture ouverte, avec options de gestion financière, garantie plancher des sommes investies.
+            Assurance vie, Contrat de capitalisation, PER, FIP FCPI, Offre Multigestionnaire, contrat à architecture ouverte, options de gestion financière, garantie plancher des sommes investies.
           </div>
         </div>
 

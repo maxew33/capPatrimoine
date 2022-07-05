@@ -75,13 +75,11 @@ section .banner-contact {
 }
 
 .contact-form-input input,
-.contact-form-select,
 .contact-form-btn {
   height: 4.5rem;
 }
 
 .contact-form-input input,
-.contact-form-select,
 .contact-form-txt {
   background: var(--medium-grey);
   font-family: var(--font-fam2);
@@ -102,13 +100,6 @@ section .banner-contact {
   padding: 0 2.5%;
 }
 
-.contact-form-select {
-  cursor: pointer;
-  width: 80%;
-  border: none;
-  padding: 0 2.5%;
-}
-
 .contact-form-txt {
   width: 75%;
   height: 18rem;
@@ -126,9 +117,7 @@ section .banner-contact {
 }
 
 input:focus ~ .input-txt-label,
-textarea:focus ~ .input-txt-label,
-input:valid ~ .input-txt-label,
-textarea:valid ~ .input-txt-label {
+textarea:focus ~ .input-txt-label {
   font-size: 0.75rem;
   padding: 0;
 }
@@ -230,10 +219,6 @@ textarea:valid ~ .input-txt-label {
 
   .contact-form-input input {
     width: 95%;
-  }
-
-  .contact-form-select {
-    width: 100%;
   }
 
   .contact-form-txt {

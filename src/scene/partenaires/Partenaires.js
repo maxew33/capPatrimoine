@@ -89,7 +89,7 @@ export default function Partenaires() {
           Nos Partenaires
         </div>
         <div className="banner-page-descr">
-          Videre haec redeundum serium admodum ardore agi mirum plebem serium cum mirum ergo dimicationum textum mirum haec dimicationum memorabile admodum quodam permittunt pendentem plebem mirum nihil serium innumeram infuso serium textum pendentem.
+          L’objectivité du conseil repose sur de nombreux partenaires et une offre de qualité, tant sur l’épargne financière que l’offre immobilière directe et indirecte.
         </div>
       </div>
 

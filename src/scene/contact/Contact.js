@@ -113,6 +113,7 @@ export default function Contact() {
             className='contact-form'
             onSubmit={sendEmail}
             ref={form}>
+
             <div className="contact-form-inputs">
               <div className="contact-form-input">
                 <input id="lastname-input"
@@ -122,8 +123,9 @@ export default function Contact() {
                   required />
                 <label
                   className="input-txt-label"
-                  htmlFor="lastname-input">Nom</label>
+                  htmlFor="lastname-input">Nom *</label>
               </div>
+
               <div className="contact-form-input">
                 <input id="firstname-input"
                   type="text"
@@ -131,8 +133,9 @@ export default function Contact() {
                   required />
                 <label
                   className="input-txt-label"
-                  htmlFor="firstname-input">Prénom</label>
+                  htmlFor="firstname-input">Prénom *</label>
               </div>
+
               <div className="contact-form-input">
                 <input
                   id="email-input"
@@ -141,20 +144,17 @@ export default function Contact() {
                   required />
                 <label
                   className="input-txt-label"
-                  htmlFor="email-input">email</label>
+                  htmlFor="email-input">email *</label>
               </div>
 
-              <select
-                className='contact-form-select'
-                name="user_object"
-                id="">
-                <option value="">motif</option>
-                <option value="demande de rendez-vous">demande de rendez-vous</option>
-                <option value="audit financier">audit financier</option>
-                <option value="audit immobilier">audit immobilier</option>
-                <option value="autre">autre</option>
-
-              </select>
+              <div className="contact-form-input">
+                <input
+                  name="user_object"
+                  id="object-input"/>
+                <label
+                  className="input-txt-label"
+                  htmlFor="object-input">objet</label>
+              </div>
             </div>
 
             <div className="contact-form-txt-sub">

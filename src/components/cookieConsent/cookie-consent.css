@@ -32,4 +32,8 @@
   background-color: var(--dark-grey);
   color: var(--light-grey);
   border: none;
+}
+.cookie-consent-btn:hover {
+  background-color: var(--medium-grey);
+  color: var(--dark-grey);
 }/*# sourceMappingURL=cookie-consent.css.map */

@@ -31,7 +31,7 @@ export default function Accueil() {
 
       <div className="accueil-wrapper page-wrapper">
         <div className="banner-tagline">
-          Des professionnels de la gestion et du suivi patrimonial à votre écoute.
+          Fiscalité - Patrimoine - Investissements immobiliers - Placements financiers - Retraite
         </div>
 
         <div className="presentation">
@@ -41,17 +41,17 @@ export default function Accueil() {
             alt="christophe vitu" />
           {/* <div className="presentation-detail-container"> */}
           <div className="presentation-detail-container"></div>
-            <div className="presentation-detail-text paragraph-content-text">
-              “ Spécialiste en gestion de patrimoine, je suis présent à vos côtés pour vous accompagner dans toutes les phases de vie de votre patrimoine: construction, développement, optimisation, transmission. ”
+          <div className="presentation-detail-text paragraph-content-text">
+            “ Spécialiste en gestion de patrimoine, je suis présent à vos côtés pour vous accompagner dans toutes les phases de vie de votre patrimoine: construction, développement, optimisation, transmission. ”
+          </div>
+          <div className="presentation-detail-descr">
+            <div className="presentation-detail-name">
+              Christophe Vitu
             </div>
-            <div className="presentation-detail-descr">
-              <div className="presentation-detail-name">
-                Christophe Vitu
-              </div>
-              <div className="presentation-detail-rank">
-                expert au cabinet CAP Patrimoine
-              </div>
+            <div className="presentation-detail-rank">
+              expert au cabinet CAP Patrimoine
             </div>
+          </div>
           {/* </div> */}
         </div>
 
