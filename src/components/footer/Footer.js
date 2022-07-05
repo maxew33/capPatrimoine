@@ -13,23 +13,12 @@ export default function Footer() {
   const dispatch = useDispatch()
 
   const handleClick = () => {
-    console.log('legal notice')
     document.querySelector('.legal-notice-wrapper').style.display = 'block'
     setTimeout(() => { document.querySelector('.legal-notice-wrapper').style.opacity = 1 }, 10)
   }
 
   return (
     <div className='footer'>
-
-      {/* <div className="logo-container"
-        onClick={() => dispatch(changePage(0))}>
-        <img className="logo-container-img"
-          src={logo}
-          alt="cabinet cap patrimoine" />
-        <div className="logo-container-name">
-          Cabinet CAP Patrimoine
-        </div>
-      </div> */}
 
       <div className="footer-logo-container" onClick={() => dispatch(changePage(0))}>
         <img className="footer-logo-container-img"

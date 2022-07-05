@@ -39,7 +39,6 @@ export default function Accueil() {
             className='id-pic'
             src={chrisVitu}
             alt="christophe vitu" />
-          {/* <div className="presentation-detail-container"> */}
           <div className="presentation-detail-container"></div>
           <div className="presentation-detail-text paragraph-content-text">
             “ Spécialiste en gestion de patrimoine, je suis présent à vos côtés pour vous accompagner dans toutes les phases de vie de votre patrimoine: construction, développement, optimisation, transmission. ”
@@ -52,7 +51,6 @@ export default function Accueil() {
               expert au cabinet CAP Patrimoine
             </div>
           </div>
-          {/* </div> */}
         </div>
 
         <div className="characteristics">
@@ -69,23 +67,6 @@ export default function Accueil() {
             src={hands}
             alt="poignée de mains" />
         </div>
-
-        {/* <div className="characteristics">
-          <div className="characteristics-detail-container">
-            <div className="characteristics-detail-title">
-              Notre politique
-            </div>
-
-            <div className="characteristics-detail-text paragraph-content-text">
-              Nous intervenons en interprofessionnalité avec vos conseillers habituels : experts comptables, notaires et avocats fiscalistes.
-              Cette collaboration apporte un regard croisé et crée une véritable valeur ajoutée.
-            </div>
-          </div>
-          <img 
-          className='characteristics-img'
-          src={hands} 
-          alt="poignée de mains" />
-        </div> */}
 
         <CtaContact />
 

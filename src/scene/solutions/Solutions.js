@@ -9,7 +9,6 @@ import './solutions.css'
 export default function Solutions() {
   return (
     <section>
-      {/* faire un toggle pour changer la classe des solutions => characteristic lors du passage en portrait */}
 
       <div className="banner banner-solutions">
         <div className="banner-title">
@@ -19,7 +18,6 @@ export default function Solutions() {
           Les solutions proposées ne sont que l’aboutissement du chemin parcouru ensemble, chemin à travers lequel vos problématiques, vos besoins et attentes sont mis en avant.
         </div>
       </div>
-
 
       <div className="solutions-wrapper page-wrapper">
 

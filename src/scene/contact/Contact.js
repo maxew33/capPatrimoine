@@ -19,8 +19,6 @@ export default function Contact() {
   const sendEmail = e => {
     e.preventDefault()
 
-    console.log(process.env.REACT_APP_EMAILKEY_USER_ID)
-
     emailjs.sendForm(
       process.env.REACT_APP_EMAILKEY_SERVICE_ID,
       process.env.REACT_APP_EMAILKEY_TEMPLATE_ID,
@@ -118,7 +116,6 @@ export default function Contact() {
               <div className="contact-form-input">
                 <input id="lastname-input"
                   type="text"
-                  // name="user-lastname"
                   name="from_lastname"
                   required />
                 <label

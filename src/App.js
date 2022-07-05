@@ -48,7 +48,6 @@ function App() {
 `)
 
     size.height < size.width ? setOrientation('landscape') : setOrientation('portrait')
-    console.log(size.height)
 
   }, [])
 
@@ -59,14 +58,11 @@ function App() {
   }, [size])
 
   const fastScrollToTop = () => {
-    console.log('scroll to top')
     document.documentElement.scrollTo(0, 0)
   }
 
   return (
     <div className="App">
-
-      {/* <TransitionSlide/> */}
 
       <Header pages={pages} />
 
