@@ -55,7 +55,8 @@ export default function Header(props) {
       <div className="burger-header">
         <img className="burger-header-logo"
           src={logo}
-          alt="cabinet cap patrimoine" />
+          alt="cabinet cap patrimoine"
+          onClick={() => dispatch(changePage(0))} />
         <div className="burger-header-name">
           Cabinet CAP Patrimoine
         </div>
@@ -63,17 +64,17 @@ export default function Header(props) {
 
       <div className="burger-container"
         onClick={handleClick}>
-        <div className="burger" 
-        ref={burger}>
+        <div className="burger"
+          ref={burger}>
 
         </div>
       </div>
 
       <div className="click-outside"
-      ref={outsideClick}
+        ref={outsideClick}
         onClick={handleClick}>
 
-        </div>
+      </div>
 
       <div className="header" ref={header}>
 

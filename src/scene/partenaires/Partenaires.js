@@ -56,7 +56,8 @@ export default function Partenaires() {
           Nos Partenaires
         </div>
         <div className="banner-page-descr">
-          L’objectivité du conseil repose sur de nombreux partenaires et une offre de qualité, tant sur l’épargne financière que l’offre immobilière directe et indirecte.
+          L’objectivité du conseil repose sur la multiplicité des partenaires (plus de 140) et une offre de qualité, tant sur l’épargne financière que l’offre immobilière directe et indirecte.<br/>
+          Voici une liste non exhaustive de nos partenaires.
         </div>
       </div>
 
