@@ -10,7 +10,7 @@ export default function CookieConsent() {
   return (
     <div className="cookie-consent-wrapper">
       <div className="cookie-consent-text">
-        Au cabinet CAP patrimoine, notre objectif est de vous guider en toute <span className="bold-txt">confiance</span> et en respectant votre <span className="bold-txt">confidentialité</span>. <br/>
+        Au cabinet Cap Patrimoine, notre objectif est de vous guider en toute <span className="bold-txt">confiance</span> et en respectant votre <span className="bold-txt">confidentialité</span>. <br/>
          C'est pouquoi nous n'utilisons pas de cookie sur ce site.
       </div>
       <button className="cookie-consent-btn"

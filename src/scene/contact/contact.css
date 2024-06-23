@@ -5,8 +5,7 @@ section .banner-contact {
 .banner-img {
   height: 25vh;
   width: 100vw;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 .contact {
@@ -144,11 +143,10 @@ textarea:focus ~ .input-txt-label {
   position: fixed;
   top: 0;
   left: 0;
-  background: hsla(0deg, 0%, 0%, 0.25);
+  background: hsla(0, 0%, 0%, 0.25);
   opacity: 0;
   transition: 0.125s opacity ease-in-out;
-  -webkit-backdrop-filter: blur(2px);
-          backdrop-filter: blur(2px);
+  backdrop-filter: blur(2px);
   z-index: 150;
 }
 .contact-form-sent .contact-form-sent-wrapper {
@@ -191,7 +189,6 @@ textarea:focus ~ .input-txt-label {
     flex-direction: column;
     gap: 1.5rem;
   }
-
   .contact-direct-detail {
     width: 100%;
     aspect-ratio: auto;
@@ -201,37 +198,30 @@ textarea:focus ~ .input-txt-label {
     place-items: center;
     padding: 0;
   }
-
   .contact-direct-icon {
     font-size: 5rem;
     padding: 1.5rem;
   }
-
   .contact-form {
     flex-direction: column;
     gap: 2.5rem;
   }
-
   .contact-form-inputs,
-.contact-form-txt-sub {
+  .contact-form-txt-sub {
     width: 100%;
   }
-
   .contact-form-input input {
     width: 95%;
   }
-
   .contact-form-txt {
     width: 95%;
     padding: 5% 2.5%;
   }
-
   .input-txt-label {
     left: 2.5%;
     top: 2.5%;
   }
-
   .contact-form-btn {
     width: 95%;
   }
-}/*# sourceMappingURL=contact.css.map */
+}

@@ -180,7 +180,7 @@ export default function Contact() {
             <div className="contact-form-sent-message">
               <img className="contact-form-sent-logo"
                 src={logo}
-                alt="cabinet cap patrimoine" />
+                alt="cabinet Cap Patrimoine" />
               <div>
                 Message envoyé.
               </div>

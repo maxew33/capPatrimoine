@@ -2,12 +2,20 @@
     display: flex;
     background: linear-gradient(var(--medium-grey), var(--light-grey));
     border-top: 5px solid var(--dark-grey);
+    flex-direction: column;
+    
+}
+
+.footer-top{
+    display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 1rem 0;
+    
+    border-bottom: 5px solid var(--white);
     & > div {
-        cursor: pointer;
-    }
+        cursor: pointer;}
+
 }
 
 .footer-logo-container {
@@ -32,8 +40,19 @@
     height: 2.5rem;
 }
 
+.footer-btm{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 1rem;
+    gap: .5rem;
+    flex-wrap: wrap;
+    font-size: .75rem;
+}
+
 @media (max-width: 800px) {
-    .footer {
+    .footer-top {
         flex-direction: column;
         gap: 1.5rem;
     }

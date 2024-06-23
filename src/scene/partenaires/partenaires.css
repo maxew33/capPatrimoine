@@ -49,13 +49,11 @@
   display: flex;
   align-items: center;
   gap: 2.5rem;
-  -webkit-animation: slide var(--slide-speed) linear infinite;
-          animation: slide var(--slide-speed) linear infinite;
+  animation: slide var(--slide-speed) linear infinite;
   padding: 0 1.25rem;
 }
 .carousel-content:nth-child(even) {
-  -webkit-animation-delay: calc(var(--slide-speed) / -2);
-          animation-delay: calc(var(--slide-speed) / -2);
+  animation-delay: calc(var(--slide-speed) / -2);
 }
 .carousel-content img {
   height: 5rem;
@@ -66,15 +64,6 @@
   --x-begin: 100%;
 }
 
-@-webkit-keyframes slide {
-  from {
-    transform: translateX(var(--x-begin));
-  }
-  to {
-    transform: translateX(calc(var(--x-begin) * -1));
-  }
-}
-
 @keyframes slide {
   from {
     transform: translateX(var(--x-begin));
@@ -82,4 +71,4 @@
   to {
     transform: translateX(calc(var(--x-begin) * -1));
   }
-}/*# sourceMappingURL=partenaires.css.map */
+}

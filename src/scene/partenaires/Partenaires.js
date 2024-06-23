@@ -26,11 +26,12 @@ export default function Partenaires() {
     intro: 'Des programmes en investissement locatif rigoureusement sélectionnés sur tout le territoire',
     logos: placementLogo
   },
-  {
-    name: 'Financement',
-    intro: 'Des programmes en investissement locatif rigoureusement sélectionnés sur tout le territoire',
-    logos: financementLogo
-  }]
+  // {
+  //   name: 'Financement',
+  //   intro: 'Des programmes en investissement locatif rigoureusement sélectionnés sur tout le territoire',
+  //   logos: financementLogo
+  // }
+]
 
 
   const setMySpeed = (idx) => {

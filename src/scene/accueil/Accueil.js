@@ -25,7 +25,7 @@ export default function Accueil() {
 
       <div className="banner banner-accueil">
         <div className="banner-title">
-          Cabinet CAP Patrimoine
+          Cabinet Cap Patrimoine
         </div>
       </div>
 
@@ -35,20 +35,16 @@ export default function Accueil() {
         </div>
 
         <div className="presentation">
-          <img
-            className='id-pic'
-            src={chrisVitu}
-            alt="christophe vitu" />
-          <div className="presentation-detail-container"></div>
+
           <div className="presentation-detail-text paragraph-content-text">
-            “ Spécialiste en gestion de patrimoine, je suis présent à vos côtés pour vous accompagner dans toutes les phases de vie de votre patrimoine: construction, développement, optimisation, transmission. ”
+            “ Diplômé d'un Master 2 Expert en Gestion de Patrimoine, Conseiller en Investissement Financier, je suis présent à vos côtés pour vous accompagner dans toutes les phases de vie de votre patrimoine: création, développement, optimisation et transmission ”
           </div>
           <div className="presentation-detail-descr">
             <div className="presentation-detail-name">
               Christophe Vitu
             </div>
             <div className="presentation-detail-rank">
-              expert au cabinet CAP Patrimoine
+              expert au cabinet Cap Patrimoine
             </div>
           </div>
         </div>

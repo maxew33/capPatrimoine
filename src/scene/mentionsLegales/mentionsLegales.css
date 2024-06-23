@@ -5,11 +5,10 @@
   position: fixed;
   top: 0;
   left: 0;
-  background: hsla(0deg, 0%, 0%, 0.25);
+  background: hsla(0, 0%, 0%, 0.25);
   opacity: 0;
   transition: 0.125s opacity ease-in-out;
-  -webkit-backdrop-filter: blur(2px);
-          backdrop-filter: blur(2px);
+  backdrop-filter: blur(2px);
   z-index: 100;
 }
 
@@ -50,7 +49,6 @@
 }
 
 .exit-cross {
-  position: -webkit-sticky;
   position: sticky;
   top: -2.5rem;
   right: 2.5rem;
@@ -63,4 +61,4 @@
   display: grid;
   place-content: center;
   cursor: pointer;
-}/*# sourceMappingURL=mentionsLegales.css.map */
+}

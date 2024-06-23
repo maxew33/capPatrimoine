@@ -14,7 +14,7 @@ export default function Cabinet() {
 
       <div className="banner banner-cabinet">
         <div className="banner-title">
-          Cabinet CAP Patrimoine
+          Cabinet Cap Patrimoine
         </div>
         <div className="banner-page-descr">
           Fort de 18 années d’expériences dans le domaine bancaire (notamment en banque privée) et dans les assurances, notre équipe reste en veille sur les nouveautés fiscales, économiques et juridiques pour toujours mieux vous accompagner.
@@ -67,7 +67,7 @@ export default function Cabinet() {
           </div>
 
           <div className="characteristics-text paragraph-content-text">
-            Au cabinet CAP Patrimoine, vous aurez un interlocuteur unique qui s’engagera à vous accompagner dans le temps pour des solutions optimisées et personnalisées.
+            Au cabinet Cap Patrimoine, vous aurez un interlocuteur unique qui s’engagera à vous accompagner dans le temps pour des solutions optimisées et personnalisées.
           </div>
 
         </div>

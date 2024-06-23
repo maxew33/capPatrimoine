@@ -74,7 +74,7 @@ function App() {
 
       <Footer />
 
-      <CookieConsent/>
+      {/* <CookieConsent/> */}
 
     </div>
   );
